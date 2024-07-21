@@ -80,6 +80,9 @@
     &.-portfolio{&::before{content: "CONSTRUCTION PORTFOLIO"; white-space: nowrap;}}// 施工例
     &.-owner{&::before{content: "OWNER VOICE"; white-space: nowrap;}}               // オーナー
 
+    &.-message{&::before{content: "MESSAGE FROM THE ARCHITECT & DESIGNER"; white-space: nowrap;}}            // サンプル
+    &.-level{&::before{content: "ZEH-LEVEL HIGH-PERFORMANCE"; white-space: nowrap;}}            // サンプル
+
     &.-sample{&::before{content: "CONTENT TITLE"; white-space: nowrap;}}            // サンプル
 }
 

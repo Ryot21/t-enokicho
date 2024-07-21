@@ -4769,6 +4769,14 @@ button.swiper-pagination-bullet {
   content: "OWNER VOICE";
   white-space: nowrap;
 }
+.c-contents_title.-message::before {
+  content: "MESSAGE FROM THE ARCHITECT & DESIGNER";
+  white-space: nowrap;
+}
+.c-contents_title.-level::before {
+  content: "ZEH-LEVEL HIGH-PERFORMANCE";
+  white-space: nowrap;
+}
 .c-contents_title.-sample::before {
   content: "CONTENT TITLE";
   white-space: nowrap;
@@ -5171,7 +5179,7 @@ button.swiper-pagination-bullet {
     width: 75%;
   }
   .c-flex.-col1_2.-pc2_1 li:nth-child(2) {
-    width: 20%;
+    width: 23%;
   }
 }
 .c-flex.-col2_2 .flexItem {
