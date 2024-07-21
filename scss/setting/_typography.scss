@@ -188,7 +188,7 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,button{
         }
         &.s-kome{
             font-size: 1rem;
-            color: $site-color_kome;
+            // color: $site-color_kome;
             transform: scale(.8);
             @include min(768){font-size: clamp(1rem, 2vw, 1.2rem);}
         }

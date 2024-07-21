@@ -405,7 +405,6 @@ h1.s-3L, h2.s-3L, h3.s-3L, h4.s-3L, h5.s-3L, h6.s-3L, p.s-3L, a.s-3L, span.s-3L,
 }
 h1.s-kome, h2.s-kome, h3.s-kome, h4.s-kome, h5.s-kome, h6.s-kome, p.s-kome, a.s-kome, span.s-kome, label.s-kome, button.s-kome {
   font-size: 1rem;
-  color: #dacebc;
   transform: scale(0.8);
 }
 @media (width >= 768px) {
@@ -4672,7 +4671,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   max-width: 1100px;
   height: 1px;
-  background: #3b3b3b;
+  background: #514100;
 }
 @media (width >= 768px) {
   .c-contents_title.-b-btm::after {
@@ -4713,7 +4712,7 @@ button.swiper-pagination-bullet {
   content: "INNER DESIGN";
 }
 .c-contents_title.-layout::before {
-  content: "LAYOUT PLAN / PLOT PLAN";
+  content: "TOWN LAYOUT";
   white-space: nowrap;
 }
 .c-contents_title.-house-layout::before {
@@ -4759,7 +4758,7 @@ button.swiper-pagination-bullet {
   white-space: nowrap;
 }
 .c-contents_title.-spot::before {
-  content: "RECOMMENDED SPOTS";
+  content: "A CITY IN THE SPOTLIGHT";
   white-space: nowrap;
 }
 .c-contents_title.-portfolio::before {

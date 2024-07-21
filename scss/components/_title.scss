@@ -37,7 +37,7 @@
             width: 100%;
             max-width: 1100px;
             height: 1px;
-            background: $main-color--b;
+            background: $site-color01;
             @include min(768){
                 bottom: -30px;
             }
@@ -61,7 +61,7 @@
     &.-naikan{&::before{content: "NTROSPECTION";}}                                  // 内観
     &.-naikanDesign{&::before{content: "INNER DESIGN";}}                            // 内観デザイン
 
-    &.-layout{&::before{content: "LAYOUT PLAN / PLOT PLAN"; white-space: nowrap;}}  // レイアウト
+    &.-layout{&::before{content: "TOWN LAYOUT"; white-space: nowrap;}}  // レイアウト
     &.-house-layout{&::before{content: "HOUSE LAYOUT"; white-space: nowrap;}}       // ハウスレイアウト
     &.-plan{&::before{content: "PLAN"; white-space: nowrap;}}                       // プラン
 
@@ -76,7 +76,7 @@
     &.-deilyUse{&::before{content: "DAILY USE";}}                                   // 周辺環境
     &.-access{&::before{content: "ACCESS";}}                                        // アクセス
     &.-location{&::before{content: "SURROUNDING ENVIRONMENT"; white-space: nowrap;}}// 交通
-    &.-spot{&::before{content: "RECOMMENDED SPOTS"; white-space: nowrap;}}          // スポット
+    &.-spot{&::before{content: "A CITY IN THE SPOTLIGHT"; white-space: nowrap;}}          // スポット
     &.-portfolio{&::before{content: "CONSTRUCTION PORTFOLIO"; white-space: nowrap;}}// 施工例
     &.-owner{&::before{content: "OWNER VOICE"; white-space: nowrap;}}               // オーナー
 
