@@ -1,0 +1,69 @@
+
+@keyframes scroll-onLogo {
+    0% {
+        pointer-events: none;
+        opacity: 0;
+    }
+    49%{
+        pointer-events: all;
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scroll-onNav {
+    0% {
+        pointer-events: none;
+        opacity: 0;
+    }
+    29%{
+        pointer-events: all;
+        opacity: .9;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scroll-onBtn {
+    0% {
+        pointer-events: none;
+        opacity: 0;
+    }
+    10%{
+        pointer-events: all;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+       opacity: 1;
+    }
+}
+
+.a-scroll-on{
+    @include min(768){
+        opacity: 0;
+        animation: scroll-onNav;
+        animation-timeline: scroll();
+        animation-range: cover 0% cover 100%;
+    }
+      // &_btn{
+      // 	  position: sticky;
+      // 	  width: 10%;
+      // }
+
+      // &_logo{
+      // 	  position: sticky;
+      // 	  width: 10%;
+      // }
+
+}

@@ -1,0 +1,102 @@
+
+/* -----------------------------------------
+    animation-range: entry -20% contain 40%;
+    画面の-20%下方から変化を開始、
+    画面の40%に到達したときに変化が終了する。
+----------------------------------------- */
+
+.a{
+    /* ---------------------------------------
+        通常のfadeアニメーション
+    --------------------------------------- */
+    &-fade{
+        opacity: 0;
+        animation-name:fadeAnime;
+        perspective-origin: left center;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeAnime{
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    /* ---------------------------------------
+        fadeUPアニメーション
+    --------------------------------------- */
+    &-fadeUp{
+        opacity: 0;
+        animation-name:fadeUpAnime;
+        perspective-origin: left center;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeUpAnime{
+        from {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    /* ---------------------------------------
+        fadeDownアニメーション
+    --------------------------------------- */
+    &-fadeDown{
+        opacity: 0;
+        animation-name:fadeDownAnime;
+        perspective-origin: left center;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeDownAnime{
+        from {
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    /* ---------------------------------------
+        fadeRightアニメーション
+    --------------------------------------- */
+    &-fadeRight{
+        opacity: 0;
+        animation-name:fadeRightAnime;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeRightAnime{
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    /* ---------------------------------------
+        fadeLeftアニメーション
+    --------------------------------------- */
+    &-fadeLeft{
+        opacity: 0;
+        animation-name:fadeLeftAnime;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeLeftAnime{
+        from {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+

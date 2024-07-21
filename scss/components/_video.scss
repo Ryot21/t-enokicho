@@ -1,0 +1,46 @@
+
+.c-video{
+	margin: auto;
+	@include min(768){
+		width: 100%;
+	}
+	@include min(1000){
+		width: 100%;
+	}
+	.c-videoWrap{
+		padding-top: 56.25%;
+		width: 100%;
+		position: relative;
+		.video,
+		.video-item{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+	}
+}
+
+.c-youtubeBox{
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	margin: auto;
+	aspect-ratio: 16 / 9;
+	border: 1px solid $main-color--b;
+	box-shadow: 1px 1px 5px #8d8d8d;
+	@include min(768){
+		width: 65%;
+		padding: 10px;
+
+	}
+	.c-youtubeBox-inner{
+		height: -webkit-fill-available;
+		margin: auto;
+	}
+	iframe{
+		width: 100% !important;
+		height: 100% !important;
+	}
+}

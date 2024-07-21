@@ -1,0 +1,15 @@
+// 4. 参考プランページ
+
+.p-plan{
+	width: 100vw;
+	height: 100lvh;
+	animation: fadeAnime 2s forwards;
+	@include min(768){
+		animation: fadeAnime 2s forwards;
+	}
+	.testBox{
+		width: 100vw;
+		height: 150vh;
+		background: rgba(0, 0, 0, 0.392);
+	}
+}

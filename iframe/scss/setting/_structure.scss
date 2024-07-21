@@ -1,0 +1,19 @@
+$breakpoint: (
+    sp: 'screen and (max-width: 768px)',
+    tb: 'screen and (min-width: 767px)',
+    tb-pc1000: 'screen and (min-width: 1000px)',
+    tb-pc1100: 'screen and (min-width: 1100px)',
+    tb-pc1200: 'screen and (min-width: 1200px)',
+    tb-pc1300: 'screen and (min-width: 1300px)',
+    tb-pc1400: 'screen and (min-width: 1400px)',
+    tb-pc1500: 'screen and (min-width: 1500px)',
+    tb-pc1600: 'screen and (min-width: 1600px)',
+    tb-pc1850: 'screen and (min-width: 1850px)',
+    pc: 'screen and (min-width: 1600px)'
+
+);
+@mixin mq($bp) {
+    @media #{map-get($breakpoint, $bp)} {
+        @content;
+    }
+}

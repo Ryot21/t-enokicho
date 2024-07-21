@@ -1,0 +1,411 @@
+// font-family(ローカル)
+@font-face {// 英文フォント01
+    font-family: "e-font01";
+    src: url("../fonts/en/BebasNeue-Regular.ttf")            format("truetype");
+}
+@font-face {// 英文フォント02
+    font-family: "e-font02";
+    src: url("../fonts/en/impact.ttf")                       format("truetype");
+}
+@font-face {// 英文フォント03
+    font-family: "e-font03";
+    src: url("../fonts/en/EBGaramond-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {// 明朝フォント
+    font-family: "mincho-font01";
+    src: url("../fonts/mincho/ShipporiMincho-Regular.ttf")   format("truetype");
+}
+@font-face {// ゴシックフォント
+    font-family: "gothic-font01";
+    // src: url("../fonts/gothic/ZenKakuGothicNew-Regular.ttf") format("truetype");
+    src: url("../fonts/gothic/FOT-RodinNTLGPro-M.otf")       format("opentype");
+}
+// @font-face {// デザインフォント(WEBでは使用できない)
+//     font-family: "d-font01";
+//     src: url("../fonts/design/DS-ayumin.ttf")                format("truetype");
+// }
+
+
+$f-mincho:    mincho-font01; // 明朝体01
+$f-gothic:    gothic-font01; // ゴシック体01
+$f-e01:       e-font01;      // 英文フォント01
+$f-e02:       e-font02;      // 英文フォント02
+$f-e03:       e-font03;      // 英文フォント03
+// $f-d01:       d-font01;      // デザインフォント01
+
+// font-weight
+$f-n: normal;
+$f-b: bold;
+
+
+// 基本テキスト
+h1,h2,h3,h4,h5,h6,p,a,span,label,button{
+	color: $main-color--b;
+	font-family: $f-mincho;
+    // font-family: $f-gothic;
+    font-weight: $f-n;
+    font-style: normal;
+    // text-wrap: balance;
+    // word-break: auto-phrase;
+	line-height: 1.3;
+
+    // ボーダー
+    &.b-text{
+        display: inline;
+        text-decoration: underline;
+    }
+
+    // ----- 位置関係 -----
+    // 横_位置
+    &.-right  {text-align: right;}
+    &.-left   {text-align: left;}
+    &.-center {text-align: center;}
+    // 縦_位置
+    &.-top    {vertical-align: top;}
+    &.-bottom {vertical-align: bottom;}
+    &.-middle {vertical-align: middle;}
+
+    // 行間
+    &.-lh-n    {line-height: normal;}
+	&.-lh-1    {line-height: 1;}
+    &.-lh-1_3  {line-height: 1.3;}
+	&.-lh-1_5  {line-height: 1.5;}
+    &.-lh-1_8  {line-height: 1.8;}
+    &.-lh-2    {line-height: 2;}
+    &.-lh-3    {line-height: 3;}
+
+    &.-lh-n_s  {@include max(768){ line-height: normal;}}
+	&.-lh-1_s  {@include max(768){ line-height: 1;}}
+    &.-lh-1_3_s{@include max(768){ line-height: 1.3;}}
+	&.-lh-1_5_s{@include max(768){ line-height: 1.5;}}
+    &.-lh-1_8_s{@include max(768){ line-height: 1.8;}}
+    &.-lh-2_s  {@include max(768){ line-height: 2;}}
+    &.-lh-3_s  {@include max(768){ line-height: 3;}}
+
+    // 文字間隔
+    &.-ls-n{letter-spacing: normal;}
+    &.-ls-1{letter-spacing: .1rem;}
+    &.-ls-2{letter-spacing: .2rem;}
+    &.-ls-3{letter-spacing: .3rem;}
+    &.-ls-4{letter-spacing: .4rem;}
+    &.-ls-5{letter-spacing: .5rem;}
+
+    &.-ls-n_s {@include max(768){ letter-spacing: normal;}}
+	&.-ls-1_s {@include max(768){ letter-spacing: .1rem; }}
+    &.-ls-2_s {@include max(768){ letter-spacing: .2rem; }}
+	&.-ls-3_s {@include max(768){ letter-spacing: .3rem; }}
+    &.-ls-4_s {@include max(768){ letter-spacing: .4rem; }}
+    &.-ls-5_s {@include max(768){ letter-spacing: .5rem; }}
+
+    // 影
+    &.-shadow{filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.637)) !important;}
+
+    // 折り返し禁止
+    &.-ws-n{white-space: nowrap}
+
+    // 縦組み
+    &.-tate{
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        &_s{
+            @include max(768){
+                -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+            }
+        }
+    }
+
+    // 太さ
+    &.-b{font-weight: $f-b;}
+
+    // フォントファミリー(ローカルフォント)
+    &.-f-mincho01{font-family: mincho-font01;}// しっぽり
+    &.-f-gothic01{font-family: gothic-font01;}// セザンヌ
+    &.-f-En01{font-family: e-font01;}         // BebasNeue
+    &.-f-En02{font-family: e-font02;}         // impact
+    &.-f-En03{font-family: e-font03;}         // garamond
+
+    // 色
+    &.-white{color: $main-color--w !important;}
+    &.-black{color: $main-color--b !important;}
+
+    &.-color01{color: $site-color01 !important;}
+    &.-color02{color: $site-color02 !important;}
+    &.-color03{color: $site-color03 !important;}
+    &.-color04{color: $site-color04 !important;}
+    &.-house_c01{color: $house-color01;}
+    &.-house_c02{color: $house-color02;}
+    &.-house_c03{color: $house-color03;}
+    &.-house_c04{color: $house-color04;}
+
+    // SOLD OUT時に使用する
+    &.-grayOut{
+        pointer-events: none;
+        opacity: .1;
+        a{
+            pointer-events: none;
+            &::before,
+            &::after{
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+// 大きさ
+html {
+    // 基本（10px相当）
+    font-size: 62.5%;
+}
+h1,h2,h3,h4,h5,h6,p,a,span,label,button{
+        &.s-SS{
+            font-size: 1rem;
+            @include min(768){font-size: clamp(1rem, 2vw, 1.2rem);}
+        }
+        &.s-S{
+            font-size: 1.1rem;
+            @include min(768){font-size: clamp(1rem, 1.2vw, 1.5rem);}
+        }
+        &.s-M{
+            font-size: 1.2rem;
+            @include min(768){font-size: clamp(1.2rem, 1.5vw, 1.6rem);}
+        }
+        &.s-ML{
+            font-size: 1.6rem;
+            @include min(768){font-size: clamp(1.6rem, 2vw, 2rem);}
+        }
+        &.s-L{
+            font-size: 1.6rem;
+            @include min(768){font-size: clamp(1.6rem, 2vw, 2.2rem);}
+        }
+        &.s-LL{
+            font-size: 2.1rem;
+            @include min(768){font-size: clamp(1.8rem, 3vw, 3rem);}
+        }
+        &.s-3L{
+            font-size: 2.8rem;
+            @include min(768){font-size: clamp(2.1rem, 3vw, 4.8rem);}
+        }
+        &.s-kome{
+            font-size: 1rem;
+            color: $site-color_kome;
+            transform: scale(.8);
+            @include min(768){font-size: clamp(1rem, 2vw, 1.2rem);}
+        }
+        &.s-number{
+            font-size: 1.6rem;
+            @include min(768){font-size: clamp(1.6rem, 2.8vw, 5.3rem);}
+        }
+        &.s-profile{
+            font-size: 1.2rem;
+            @include min(768){font-size: clamp(1.2rem, 2.8vw, 1.4rem);}
+        }
+        // ナビゲーション関係のサイズ
+        &.-s-nav{
+            &.s-S{@include min(768){font-size: clamp(1rem, 1.2vw, 1.2rem)   !important;}}
+            &.s-M{@include min(768){font-size: clamp(1.2rem, 1.5vw, 1.4rem) !important;}}
+            &.s-L{@include min(768){font-size: clamp(1.6rem, 1.8vw, 1.8rem) !important;}}
+        }
+
+        // スマホサイズ_統一
+        &.-s10{@include max(768){font-size: 1rem;}}
+        &.-s12{@include max(768){font-size: 1.2rem;}}
+        &.-s14{@include max(768){font-size: 1.4rem;}}
+        &.-s16{@include max(768){font-size: 1.6rem;}}
+        &.-s18{@include max(768){font-size: 1.8rem;}}
+}
+
+// ナビゲーション
+p, span, a {
+    &.Top,
+    &.concept,
+    &.plan,
+    &.Grallery,
+    &.Location,
+    &.Information{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+        }
+        &::after{
+            position: absolute;
+            bottom: 11%;
+            font-size: 1rem;
+            font-family: $f-mincho;
+            font-style: normal;
+            @include min(768){
+                font-size: 1.4rem;
+                bottom: 0%;
+            }
+            @include min(1000){
+                bottom: 11%;
+            }
+        }
+    }
+    // 位置
+    &.Top,
+    &.concept,
+    &.plan,
+    &.Grallery,
+    &.Location{
+        &::before{ left: 0; }
+        &::after {
+            @include max(400){
+                bottom: -60%;
+            }
+            @include max(768){
+                left: 0%;
+            }
+            @include min(768){
+                left: 30%;
+            }
+            @include min(1000){
+                left: 30%;
+            }
+            @include min(1400){
+                left: 42%;
+            }
+        }
+    }
+    &.Information{
+        &::after{
+            @include max(400){
+                bottom: -60%;
+            }
+            @include max(768){
+                left: 0%;
+            }
+            @include min(768){
+                left: 41%;
+            }
+            @include min(1000){
+                left: 41%;
+            }
+            @include min(1400){
+                left: 50%;
+            }
+        }
+    }
+
+    // ボーダー&テキスト
+    &.Top{
+        &::before{
+            @include min(768){
+                background: $main-color--b;
+                width: 50%;
+            }
+            @include min(1000){
+                width: 45%;
+            }
+            @include min(1400){
+                width: 57%;
+            }
+            @include min(1600){
+                width: 58%;
+            }
+        }
+        &::after{ content: "トップ"; }
+    }
+    &.concept{
+        &::before{
+            @include min(768){
+                background: $house-color01;
+                width: 60%;
+            }
+            @include min(1000){
+                width: 54%;
+            }
+            @include min(1400){
+                width: 66%;
+            }
+            @include min(1600){
+                width: 67%;
+            }
+        }
+        &::after{ content: "コンセプト"; }
+    }
+    &.plan{
+        &::before{
+            @include min(768){
+                left: 0;
+                background: $house-color02;
+                width: 50%;
+            }
+            @include min(1000){
+                width: 45%;
+            }
+            @include min(1400){
+                width: 57%;
+            }
+            @include min(1600){
+                width: 58%;
+            }
+        }
+        &::after{ content: "プラン"; }
+    }
+    &.Grallery{
+        &::before{
+            @include min(768){
+                left: 0;
+                background: $house-color03;
+                width: 61%;
+            }
+            @include min(1000){
+                width: 54%;
+            }
+            @include min(1400){
+                width: 66%;
+            }
+            @include min(1600){
+                width: 67%;
+            }
+        }
+        &::after{ content: "ギャラリー"; }
+    }
+    &.Location{
+        &::before{
+            @include min(768){
+                left: 0;
+                background: $house-color04;
+                width: 66%;
+            }
+            @include min(1000){
+                width: 58%;
+            }
+            @include min(1400){
+                width: 72%;
+            }
+            @include min(1600){
+                width: 73%;
+            }
+        }
+        &::after{ content: "ロケーション"; }
+    }
+    &.Information{
+        &::before{
+            @include min(768){
+                left: 0;
+                background: $main-color--b;
+                width: 96%;
+            }
+            @include min(1000){
+                width: 83%;
+            }
+            @include min(1400){
+                width: 94%;
+            }
+            @include min(1600){
+                width: 95%;
+            }
+        }
+        &::after{ content: "インフォメーション"; }
+    }
+}
+
+// span
+span{
+    &.-block{display: block !important;}
+}

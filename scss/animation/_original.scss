@@ -1,0 +1,156 @@
+
+/*　-------------------------------------------
+    ここにはオリジナルアニメーションを記述すること。
+-------------------------------------------- */
+.a{
+    /* -----------------------------------------------
+        fade + ぼかし
+    ------------------------------------------------*/
+    &-fade-blur{
+        overflow: hidden;
+        img{animation: fview-fadeIn 1s both;}
+        @keyframes fview-fadeIn {
+            0% {
+                transform: scale(1);
+                opacity: 0;
+                filter: blur(5px);
+            }
+            100% {
+                transform: scale(1.05);
+                opacity: 1;
+                filter: blur(0);
+            }
+        }
+    }
+
+    /* ---------------------------------
+        ファーストビュー > 画像縮小, 拡大
+
+        → _slider.scssに移動
+    --------------------------------- */
+
+    /* ---------------------------------------
+        鳥の着地または飛び立つ動き
+    --------------------------------------- */
+    &-bird{
+        &_l01{
+            animation-name: birdLeftAnime01;
+            animation-fill-mode: cubic-bezier(0,1.13,.84,.39);
+        }
+        &_l02{
+            animation-name: birdLeftAnime02;
+            animation-fill-mode: cubic-bezier(0,1.13,.84,.39);
+        }
+        @keyframes birdLeftAnime01{
+            0% {
+                opacity: 0;
+                transform: translate(-200px,-10px) scale(0);
+            }
+            10% {
+                transform: translate(-200px,-10px) scale(0.3);
+            }
+            40%{
+                opacity: 0.5;
+                transform: translate(-50px,20px) scale(.75);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+        @keyframes birdLeftAnime02{
+            0% {
+                opacity: 0;
+                transform: translate(-100px,10px) scale(0);
+            }
+            10% {
+                transform: translate(-100px,10px) scale(0.3);
+            }
+            40%{
+                opacity: 0.5;
+                transform: translate(-50px,0px) scale(.75);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+        &_r{
+            animation-name: birdRightAnime;
+            animation-fill-mode: cubic-bezier(0,1.13,.84,.39);
+        }
+        @keyframes birdRightAnime{
+            0% {
+                opacity: 0;
+                transform: translate(200px,-10px) scale(0);
+            }
+            10% {
+                transform: translate(200px,-10px) scale(0.3);
+            }
+            40%{
+                opacity: 0.5;
+                transform: translate(50px,20px) scale(.75);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+    }
+    /* ---------------------------------------
+        プルプル動く
+    --------------------------------------- */
+    &-purupuru {
+        display: inline-block;
+        animation-name: purupuru;
+        animation-fill-mode:forwards;
+        @keyframes purupuru {
+            0%   { transform: scale(1, .9)   translate(0%, 0%); }
+            10%  { transform: scale(1, 1.2) translate(0%, 0%) skew(0deg, 0deg); }
+            15%  { transform: scale(1, .9)   translate(0%, 0%) skew(0deg, 0deg); }
+            20%  { transform: scale(1, 1.1)  translate(0%, 0%) skew(0deg, 0deg); }
+            40%  { transform: scale(1, .9)   translate(0%, 0%) skew(0deg, 0deg); }
+            50%  { transform: scale(1, 1.1)  translate(0%, 0%) skew(0deg, 0deg); }
+            55%  { transform: scale(1, .9)   translate(0%, 0%) skew(0deg, 0deg); }
+            60%  { transform: scale(1, 1.1)  translate(0%, 0%) skew(0deg, 0deg); }
+            80%  { transform: scale(1, 1)   translate(0%, 0%) skew(0deg, 0deg); }
+            90%  { transform: scale(1, 1)   translate(0%, 0%) skew(0deg, 0deg); }
+            100% { transform: scale(1, .9)   translate(0%, 0%); }
+        }
+    }
+}
+
+
+
+/* ---------------------------------------
+飯能LP
+--------------------------------------- */
+.title{
+-webkit-animation: wind 8s ease 0s infinite;
+animation: wind 8s ease 0s infinite;
+}
+@keyframes wind {
+0% { transform: translateY(0) }
+33.33333% { transform: translateY(10px) }
+66.66667% { transform: translateY(0) }
+100% { transform: translateY(0) }
+}
+@-webkit-keyframes wind {
+0% { -webkit-transform: translateY(0) }
+33.33333% { -webkit-transform: translateY(10px) }
+66.66667% { -webkit-transform: translateY(0) }
+100% { -webkit-transform: translateY(0) }
+}
+.ha  {animation-delay: 2s;}
+.n   {animation-delay: 4s;}
+.no  {animation-delay: 6s;}
+.u   {animation-delay: 8s;}
+.de  {animation-delay: 2s;}
+.ten {animation-delay: 4s;}
+.shi {animation-delay: 6s;}
+.ze  {animation-delay: 8s;}
+.n2  {animation-delay: 2s;}
+.to  {animation-delay: 4s;}
+.ku  {animation-delay: 6s;}
+.ra  {animation-delay: 8s;}
+.su  {animation-delay: 2s;}

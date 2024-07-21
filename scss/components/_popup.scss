@@ -1,0 +1,152 @@
+
+// 物件概要ポップアップ
+#popup,
+#popup01,
+#popup02,
+#popup-imgBox,
+#popup-madori01 {
+    display: none;
+    &:checked ~ .popup-overlay {
+        display: block;
+        background-color: #00000070;
+        z-index: 99998;
+        opacity: 1;
+    }
+    &:checked ~ .popup-window {
+        display: block;
+        z-index: 99999;
+        opacity: 1;
+    }
+}
+.popup{
+    &-open {
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        @include max(768){
+            color: $main-color--w;
+        }
+    }
+    &-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: $main-color--w;
+        z-index: -1;
+        opacity: 0;
+        transition: .5s all;
+    }
+    &-window {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 90vw;
+        max-width: 1280px;
+        height: 80vh;
+        padding: 20px;
+        background-color: $main-color--w;
+        border-radius: 6px;
+        transition: .1s all;
+        z-index: -1;
+        opacity: 0;
+        #inlineFrame,
+        #inlineFrame01,
+        #inlineFrame02{
+            width: 100%;
+            height: 100%;
+        }
+        &.-popImg {
+            height: 80lwh;
+            padding: 5%;
+            overflow-y: scroll;
+        }
+    }
+    &-close {
+        cursor: pointer;
+        position: absolute;
+        top: -26px;
+        right: 0;
+    }
+}
+.popup-text {
+    margin: 0;
+    &:not(:last-of-type) {
+        margin-bottom: 1em
+    }
+}
+
+// 画像表示用ポップアップ
+.lum{
+    &-closing{
+
+    }
+    &-lightbox{
+        transition: all 1s;
+        z-index: 999;
+        &-inner{
+            top: 50% !important;
+            left: 50% !important;
+            bottom: auto !important;
+            right: auto !important;
+            transform: translate(-50%, -50%) !important;
+            transition: all 1s;
+            img{
+                // filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.459));
+                @include min(768){
+                    width: 85%;
+                    max-width: 750px;
+                }
+            }
+        }
+        &-image-wrapper{
+            @include max(768){
+                width: 90vw !important;
+                height: 100% !important;
+                max-height: 100% !important;
+            }
+        }
+    }
+    &-gallery-button{
+        &::after{
+            @include max(768){
+                :after {
+                    width: 6vw;
+                    height: 6vw;
+                }
+            }
+        }
+    }
+    &-close-button{
+        display: none;
+        @include max(768){
+            opacity: 0.8;
+        }
+    }
+}
+
+
+// ポップアップ用のボタン
+.c-popBtn{
+    width: 75%;
+    margin: auto;
+    background: $main-color--Dgray;
+    border: 1px solid $main-color--b;
+    transition: all .5s;
+    @include min(768){
+        max-width: 200px;
+        background: $main-color--w;
+    }
+    &:hover{
+        @include min(768){
+            background: $main-color--Dgray;
+            label{color: $main-color--w;}
+        }
+    }
+}

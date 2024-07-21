@@ -1,0 +1,91 @@
+
+// ドロップメニュー
+#d-menu__checkbox,
+#d-menu__checkbox__hnav {
+    display: none;
+    &:checked ~ .d-menu__lists {
+        display: block;
+        z-index: 1;
+        opacity: 1;
+        .d-menu__subTitle {
+            pointer-events: auto;
+        }
+    }
+}
+
+
+
+
+.d-menu{
+    &__title,
+    &__subTitle{// label
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        text-align: center;
+        padding: 8% 0 !important;
+        cursor:pointer;
+    }
+    &__subTitle{// label
+        pointer-events: none;
+    }
+    &__lists{// ul
+        display: none;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .5s;
+        opacity: 0;
+    }
+    &__item{// li
+        width: 100% !important;
+        color: $main-color--b;
+        border-bottom: 1px dotted $main-color--Dgray;
+        &:last-child{border-bottom: 1px solid $main-color--Dgray;}
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0 !important;
+            transform: translateY(-50%);
+            height: 100%;
+            width: 1px;
+            background: $main-color--Dgray;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0 !important;
+            transform: translateY(-50%);
+            height: 100%;
+            width: 1px;
+            background: $main-color--Dgray;
+        }
+
+        // ホバー関係
+        &:hover{
+            background: $main-color--Dgray !important;
+            label,a,span{color: $main-color--w !important;}
+        }
+
+        // カラー制御
+        &.-top{
+            &:hover{
+                color: $main-color--w;
+                background: $site-color03 !important;
+            }
+        }
+        &.-btm{
+            border-bottom: 1px solid $main-color--Dgray;
+            &:hover{
+                color: $main-color--w;
+                background: $site-color04 !important;
+            }
+        }
+    }
+    &__link{padding: 8% 0 !important;}
+}

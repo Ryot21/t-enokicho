@@ -1,0 +1,53 @@
+.a{
+    /* ---------------------------------------
+        fade-Imgアニメーション
+    --------------------------------------- */
+    &-imgChange{
+        .bg{position: relative;}
+        .no1,
+        .no2,
+        .no3{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            animation-name:ImagesChangeAnime;
+            animation-fill-mode: forwards;
+        }
+    }
+    @keyframes ImagesChangeAnime{
+        0%{ opacity: 0;}
+        100%{ opacity: 1;}
+    }
+
+    /* ---------------------------------------
+        カラー → 白黒反転アニメーション
+    --------------------------------------- */
+    &-imgMono{
+        animation-name: monochrome;
+        animation-fill-mode: forwards;
+        animation-duration: .3s;
+        transition: all .3s;
+        &:hover{animation-name: vivid;}
+    }
+    @keyframes monochrome {
+        0%  {filter: grayscale(0%);}
+        100%{filter: grayscale(100%);}
+    }
+    /* ---------------------------------------
+        白黒 → カラー反転アニメーション
+    --------------------------------------- */
+    &-imgVivid{
+        animation-name: vivid;
+        animation-fill-mode: forwards;
+        animation-duration: .3s;
+        transition: all .3s;
+        &:hover{animation-name: vivid;}
+    }
+    @keyframes vivid {
+        0%  {filter: grayscale(100%);}
+        100%{filter: grayscale(0%);}
+    }
+}

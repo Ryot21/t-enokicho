@@ -1,0 +1,69 @@
+// オリジナル
+
+
+*{
+	box-sizing: border-box;
+}
+html{
+	margin: 0;
+	scroll-behavior: smooth; // スムーズに移動
+	scroll-padding-top: 2rem;// 止まる位置を調整
+}
+body,
+ul,li,
+h1,h2,h3,h4,h5,h6,p,a {
+    margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body{
+	width: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+img{
+	width: 100%;
+	height: auto;
+	
+	pointer-events: none;
+	user-drag: none;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+	vertical-align: bottom;
+}
+
+h1,h2,h3,h4,h5,h6,p,a {
+	// font-familyなど
+}
+a{
+	// display: block;
+	height: 100%;
+	text-decoration: none;
+}
+h1{
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0;
+	@media screen and (min-width: 415px){
+		font-size: 48px; /* IE対策 */
+        font-size: clamp(48px, 2vw, 55px);
+	}
+}
+h2{
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0;
+	@media screen and (min-width: 415px){
+		font-size: 40px; /* IE対策 */
+        font-size: clamp(24px, 2vw, 40px);
+	}
+}
+p{
+	font-size: 12px;
+	margin: 0;
+	@media screen and (min-width: 415px){
+		font-size: 16px; /* IE対策 */
+        font-size: clamp(14px, 2vw, 16px);
+	}
+}

@@ -1,0 +1,106 @@
+
+@keyframes slideUp{
+    0% {
+        background-position: 0 top;
+    }
+    100% {
+        background-position: 0 bottom;
+    }
+}
+
+@keyframes slideDown{
+    0% {
+        background-position: 0 bottom;
+    }
+    100% {
+        background-position: 0 top;
+    }
+}
+
+
+@keyframes slideRight{
+    0% {
+        background-position: left center;
+    }
+    100% {
+        background-position: right center;
+    }
+}
+
+@keyframes slideLeft{
+    0% {
+        background-position: right center;
+    }
+    100% {
+        background-position: left center;
+
+    }
+}
+@keyframes slideLeft-ver02{
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 50%;
+    }
+}
+
+/* ---------------------------------
+    画像スライド > →
+--------------------------------- */
+.a-slideRightImg{
+    overflow: hidden;
+    transition: 10s all;
+    &::after{
+        animation-name: slideRight;
+        animation-fill-mode:forwards;
+        animation-duration:20s;
+    }
+}
+
+/* ---------------------------------
+    画像スライド > ←
+--------------------------------- */
+.a-slideLeftImg{
+    overflow: hidden;
+    transition: 4s all;
+    &::after{
+        top: 1px !important;
+        animation-name: slideLeft;
+        animation-fill-mode:forwards;
+        animation-duration:5s;
+    }
+    &.-ver02{
+        &::after{
+            animation-name: slideLeft-ver02;
+            animation-fill-mode:forwards;
+            animation-duration:30s;
+        }
+    }
+}
+
+/* ---------------------------------
+    画像スライド > ↑
+--------------------------------- */
+.a-slideUpImg{
+    overflow: hidden;
+    transition: 4s all;
+    &::after{
+        animation-name: slideUp;
+        animation-fill-mode:forwards;
+        animation-duration:5s;
+    }
+}
+
+/* ---------------------------------
+    画像スライド > ↓
+--------------------------------- */
+.a-slideDownImg{
+    overflow: hidden;
+    transition: 4s all;
+    &::after{
+        animation-name: slideDown;
+        animation-fill-mode:forwards;
+        animation-duration:5s;
+    }
+}

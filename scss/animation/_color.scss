@@ -1,0 +1,35 @@
+/* ----------------------------
+    背景要素に色を順番に付与する。
+---------------------------- */
+.a-bg-color{animation: bg-color-bg 5s infinite;}
+@keyframes bg-color-bg {
+    0% { background-color: #a356af; }
+    15% { background-color: #7481cd; }
+    30% { background-color: #d22c91; }
+    45% { background-color: #a356af; }
+    60% { background-color: #7481cd; }
+    75% { background-color: #4ca5e6; }
+    85% { background-color: #7481cd; }
+    100% { background-color: #a356af; }
+}
+.a-text-color{animation: bg-color-text 5s infinite;}
+@keyframes bg-color-text {
+    0% { color: #a356af; }
+    15% { color: #7481cd; }
+    30% { color: #d22c91; }
+    45% { color: #a356af; }
+    60% { color: #7481cd; }
+    75% { color: #4ca5e6; }
+    85% { color: #7481cd; }
+    100% { color: #a356af; }
+}
+
+/* ---------------------------------------------------
+    背景画像（.c-content.-imgBg .imgBox）をスライドさせる
+--------------------------------------------------- */
+.a-rotate-bg{animation: rotate-bg 10s infinite;}
+@keyframes rotate-bg {
+    0% {transform:rotate(0deg);}
+    50% {transform:rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}

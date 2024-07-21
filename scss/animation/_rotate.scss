@@ -1,0 +1,23 @@
+
+.a{
+    /* ----------------------------
+    ・rotateRightAnime： 右回転
+    ----------------------------- */
+    &-rotateRight{// 太陽光を再現
+        animation-name: rotateRightAnime;
+        animation-fill-mode:forwards;
+        img{transition: 1s all;}
+    }
+    @keyframes rotateRightAnime{
+        0% {
+            transform:rotate(0deg);
+            transform-origin:20% 20%;// 回転させる対象物の右から20%,上から20%を軸に回転させる。
+            opacity: 0;
+        }
+        100% {
+            transform:rotate(25deg);
+            transform-origin:20% 20%;
+            opacity: .5;
+        }
+    }
+}

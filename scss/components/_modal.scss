@@ -1,0 +1,64 @@
+html{
+    position: relative;
+    overflow: hidden;
+}
+
+
+.modal{
+    position: relative;
+    .modal__overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        z-index: -11;
+        transition: all .1s;
+    }
+    .modal__container{
+        padding: 1%;
+        background: white;
+        border: 1px solid black;
+        border-radius: 10px;
+        overflow-y: auto;
+        &.-w90{
+            width: 90vw;
+            height: auto;
+            margin: auto;
+            @include min(768){
+
+            }
+        }
+    }
+    &.is-open {
+
+        .modal__overlay{
+            background: rgba(0,0,0,0.6);
+            opacity: 1;
+            z-index: 999;
+        }
+        .modal__container{
+
+
+        }
+    }
+}
+.modal{
+    &.-a-slide[aria-hidden="false"]{
+        .modal__container{
+            will-change: transform;
+            animation: slideUp .3s cubic-bezier(0, 0, .2, 1);
+        }
+    }
+    &.-a-slide[aria-hidden="true"]{
+        .modal__container{
+            will-change: transform;
+            animation: slideOut .3s cubic-bezier(0, 0, .2, 1);
+        }
+    }
+}

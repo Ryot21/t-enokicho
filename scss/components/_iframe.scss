@@ -1,0 +1,9 @@
+.c-iframeBox{
+    &.-insta{
+        .c-iframeBox_inner{
+            width: 100%;
+            aspect-ratio: 4 / 4.5;
+            border: none;
+        }
+    }
+}

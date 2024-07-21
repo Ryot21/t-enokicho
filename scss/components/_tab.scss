@@ -1,0 +1,128 @@
+.c-tabArea{
+    // border: 1px solid #707070;
+    margin: auto;
+    text-align: center;
+
+    input[name="t-01"] {display: none;}
+
+    .tab-content {
+        // z-index: -1;
+        display: none;
+        margin: auto;
+        // border-top: 1px solid #707070;
+        clear: both;
+        opacity: 0;
+        overflow: hidden;
+        @media screen and (min-width: 767px){
+
+        }
+        .tab-content-img{
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    #no1:checked ~ #no1-content,
+    #no2:checked ~ #no2-content,
+    #no3:checked ~ #no3-content,
+    #no4:checked ~ #no4-content {
+        position: inherit;
+        display: block !important;
+        z-index: 1;
+        opacity: 1;
+        transition: all 1s ease;
+    }
+    // カラム数
+    &.-col2{
+        .tab-item{
+            width: calc((100%/2) - .8%);
+            @include min(768){
+                width: calc((100%/2) - .4%);
+            }
+        }
+    }
+    &.-col3{
+        .tab-item{
+            width: calc((100%/3) - .8%);
+            @include min(768){
+                width: calc((100%/3) - .4%);
+            }
+        }
+    }
+    &.-col4{
+        .tab-item{
+            width: calc((100%/4) - .8%);
+            @include min(768){
+                width: calc((100%/4) - .4%);
+            }
+        }
+    }
+    .tab-item{
+        display: inline-block;
+        background: $main-color--w;
+        border-top:    1px solid $main-color--w;
+        border-left:   1px solid $main-color--w;
+        border-right:  1px solid $main-color--w;
+        border-bottom: 1px solid $main-color--b;
+        // カラー変更
+        &.-c01{
+            border-bottom: 1px solid $site-color01;
+            span{color: $site-color01;}
+        }
+        &.-c02{
+            border-bottom: 1px solid $site-color02;
+            span{color: $site-color02;}
+        }
+        &.-c03{
+            border-bottom: 1px solid $site-color03;
+            span{color: $site-color03;}
+        }
+        &.-c04{
+            border-bottom: 1px solid $site-color04;
+            span{color: $site-color04;}
+        }
+    }
+    input:checked + .tab-item {
+        border-top:    1px solid $main-color--b;
+        border-left:   1px solid $main-color--b;
+        border-right:  1px solid $main-color--b;
+        border-bottom: 1px solid $main-color--w;
+        box-shadow: 2px -2px 2px 0px rgb(149 149 149 / 13%);
+        border-radius: 3px 3px 0 0;
+        transition: all .3s ease;
+        &.-c01{
+            color: $main-color--w !important;
+            background: $site-color01;
+            border-top:   1px solid  $site-color01;
+            border-left:  1px solid  $site-color01;
+            border-right: 1px solid  $site-color01;
+            span{color: $main-color--w;}
+        }
+        &.-c02{
+            color: $main-color--w !important;
+            background: $site-color02;
+            border-top:   1px solid  $site-color02;
+            border-left:  1px solid  $site-color02;
+            border-right: 1px solid  $site-color02;
+            span{color: $main-color--w;}
+        }
+        &.-c03{
+            color: $main-color--w !important;
+            background: $site-color03;
+            border-top:   1px solid  $site-color03;
+            border-left:  1px solid  $site-color03;
+            border-right: 1px solid  $site-color03;
+            span{color: $main-color--w;}
+        }
+        &.-c04{
+            color: $main-color--w !important;
+            background: $site-color04;
+            border-top:   1px solid  $site-color04;
+            border-left:  1px solid  $site-color04;
+            border-right: 1px solid  $site-color04;
+            span{color: $main-color--w;}
+        }
+    }
+}

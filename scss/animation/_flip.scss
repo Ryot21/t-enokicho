@@ -1,0 +1,63 @@
+
+
+.a{
+    /* ----------------------------
+    ・flipDownAnime： 下回転
+    ----------------------------- */
+    &-flipDown{
+        animation-name: flipDownAnime;
+        animation-fill-mode:forwards;
+        opacity: 0;
+        img{transition: 1s all;}
+    }
+    @keyframes flipDownAnime{
+        from {
+            transform: perspective(2500px) rotateX(100deg);
+            opacity: 0;
+        }
+        to {
+            transform: perspective(2500px) rotateX(0);
+            opacity: 1;
+        }
+    }
+    
+    /* --------------------------------
+    ・flipLeftAnime： 左回転
+    -------------------------------- */
+    &-flipLeft{
+        animation-name: flipLeftAnime;
+        animation-fill-mode:forwards;
+        opacity: 0;
+        img{transition: 1s all;}
+    }
+    @keyframes flipLeftAnime{
+        from {
+            transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+            opacity: 0;
+        }
+        to {
+            transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+            opacity: 1;
+        }
+    }
+    /* --------------------------------
+    ・flipRightAnime：右回転
+    -------------------------------- */
+    &-flipRight{
+        animation-name: flipRightAnime;
+        animation-fill-mode:forwards;
+        opacity: 0;
+        img{transition: 1s all;}
+    }
+    @keyframes flipRightAnime{
+        from {
+            transform: perspective(600px) translate3d(0, 0, 0) rotateY(-30deg);
+            opacity: 0;
+        }
+        to {
+            transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+            opacity: 1;
+        }
+    }
+
+}

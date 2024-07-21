@@ -1,0 +1,15 @@
+// 1. TOPページ
+
+.p-top{
+	width: 100vw;
+	height: 100lvh;
+	animation: fadeAnime 3s forwards;
+	@include min(768){
+		animation: fadeAnime 2s forwards;
+	}
+	.testBox{
+		width: 100vw;
+		height: 150vh;
+		background: rgba(0, 0, 0, 0.392);
+	}
+}

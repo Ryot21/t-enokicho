@@ -1,0 +1,284 @@
+/* 
+    ここには他アニメーションでも使うような
+    共通のクラスを記述すること。
+    ※アニメーションを作成後、必ずここにも追加すること。
+*/
+
+.a{
+    /* ---------------------------------------
+        colorアニメーション
+    --------------------------------------- */
+    &-bg-color,&-text-color,&-rotate-bg,
+    /* ---------------------------------------
+        fadeアニメーション
+    --------------------------------------- */
+    &-fade,&-fadeUp,&-fadeDown,&-fadeLeft,&-fadeRight,
+    /* ---------------------------------------
+        fadeアニメーション
+    --------------------------------------- */
+    &-flipDown,&-flipLeft,&-flipRight,
+    /* ---------------------------------------
+        rotateアニメーション
+    --------------------------------------- */
+    &-rotateRight,
+    /* ---------------------------------------
+        moveアニメーション
+    --------------------------------------- */
+    &-moveUp,&-moveDown,
+    &-moveLoop,//繰り返し用
+    /* ---------------------------------------
+        zoomアニメーション
+    --------------------------------------- */
+    &-scOutImg,
+    /* ---------------------------------------
+        underLineアニメーション
+    --------------------------------------- */
+    &-underLine,
+    /* ---------------------------------------
+        imgアニメーション
+    --------------------------------------- */
+    &-imgMono,&-imgColor,
+    &-imgChange .no1,
+    &-imgChange .no2,
+    &-imgChange .no3,
+    /* ---------------------------------------
+        オリジナルアニメーション
+    --------------------------------------- */
+    &-fade-blur,                   // fade+ぼかし
+    &-bird_r,&-bird_l01,&-bird_l02,// 鳥
+    &-purupuru,                    // プルプル
+    &-fviewOutImg,&-fviewInImg     // 縮小、拡大
+    {
+    /* ---------------------------------------
+        各アニメーション_オプション関係
+    --------------------------------------- */
+
+
+            // --------- タイミング ---------
+            &.-tm05{
+                animation-delay:.5s;
+                &::after,img{animation-delay:.5s}
+            }
+            &.-tm1 {
+                animation-delay:1s;
+                &::after,img{animation-delay:1s}
+            }
+            &.-tm15{
+                animation-delay:1.5s;
+                &::after,img{animation-delay:1.5s}
+            }
+            &.-tm2 {
+                animation-delay:2s;
+                &::after,img{animation-delay:2s}
+            }
+            &.-tm25{
+                animation-delay:2.5s;
+                &::after,img{animation-delay:2.5s}
+            }
+            &.-tm3 {
+                animation-delay:3s;
+                &::after,img{animation-delay:3s}
+            }
+            &.-tm35{
+                animation-delay:3.5s;
+                &::after,img{animation-delay:3.5s}
+            }
+            &.-tm4 {
+                animation-delay:4s;
+                &::after,img{animation-delay:4s}
+            }
+            &.-tm45{
+                animation-delay:4.5s;
+                &::after,img{animation-delay:4.5s}
+            }
+            &.-tm5 {
+                animation-delay:5s;
+                &::after,img{animation-delay:5s}
+            }
+            &.-tm55{
+                animation-delay:5.5s;
+                &::after,img{animation-delay:5.5s}
+            }
+            &.-tm6 {
+                animation-delay:6s;
+                &::after,img{animation-delay:6s}
+            }
+            &.-tm65{
+                animation-delay:6.5s;
+                &::after,img{animation-delay:6.5s}
+            }
+            &.-tm7 {
+                animation-delay:7s;
+                &::after,img{animation-delay:7s}
+            }
+            &.-tm75{
+                animation-delay:7.5s;
+                &::after,img{animation-delay:7.5s}
+            }
+            &.-tm8 {
+                animation-delay:8s;
+                &::after,img{animation-delay:8s}
+            }
+            &.-tm85{
+                animation-delay:8.5s;
+                &::after,img{animation-delay:8.5s}
+            }
+            &.-tm9 {
+                animation-delay:9s;
+                &::after,img{animation-delay:9s}
+            }
+            &.-tm95{
+                animation-delay:9.5s;
+                &::after,img{animation-delay:9.5s}
+            }
+            &.-tm10{
+                animation-delay:10s;
+                &::after,img{animation-delay:10s}
+            }
+
+
+            // --------- 速度 ---------
+            &.-sp05{
+                animation-duration:0.5s;
+                &::after,img{animation-duration:0.5s;}
+            }
+            &.-sp1 {
+                animation-duration:1s;
+                &::after,img{animation-duration:1s;}
+            }
+            &.-sp15{
+                animation-duration:1.5s;
+                &::after,img{animation-duration:1.5s;}
+            }
+            &.-sp2 {
+                animation-duration:2s;
+                &::after,img{animation-duration:2s;}
+            }
+            &.-sp25{
+                animation-duration:2.5s;
+                &::after,img{animation-duration:2.5s;}
+            }
+            &.-sp3 {
+                animation-duration:3s;
+                &::after,img{animation-duration:3s;}
+            }
+            &.-sp35{
+                animation-duration:3.5s;
+                &::after,img{animation-duration:3.5s;}
+            }
+            &.-sp4 {
+                animation-duration:4s;
+                &::after,img{animation-duration:4s;}
+            }
+            &.-sp45{
+                animation-duration:4.5s;
+                &::after,img{animation-duration:4.5s;}
+            }
+            &.-sp5 {
+                animation-duration:5s;
+                &::after,img{animation-duration:5s;}
+            }
+            &.-sp55{
+                animation-duration:5.5s;
+                &::after,img{animation-duration:5.5s;}
+            }
+            &.-sp6 {
+                animation-duration:6s;
+                &::after,img{animation-duration:6s;}
+            }
+            &.-sp65{
+                animation-duration:6.5s;
+                &::after,img{animation-duration:6.5s;}
+            }
+            &.-sp7 {
+                animation-duration:7s;
+                &::after,img{animation-duration:7s;}
+            }
+            &.-sp75{
+                animation-duration:7.5s;
+                &::after,img{animation-duration:7.5s;}
+            }
+            &.-sp8 {
+                animation-duration:8s;
+                &::after,img{animation-duration:8s;}
+            }
+            &.-sp85{
+                animation-duration:8.5s;
+                &::after,img{animation-duration:8.5s;}
+            }
+            &.-sp9 {
+                animation-duration:9s;
+                &::after,img{animation-duration:9s;}
+            }
+            &.-sp95{
+                animation-duration:9.5s;
+                &::after,img{animation-duration:9.5s;}
+            }
+            &.-sp10 {
+                animation-duration:10s;
+                &::after,img{animation-duration:10s}
+            }
+            &.-sp20 {
+                animation-duration:20s;
+                &::after,img{animation-duration:20s}
+            }
+
+
+            // --------- スクロール化 ---------
+            &.-sc-auto{
+                animation-timeline: view();
+                animation-range: entry 0% contain 30%;
+                &::after,img{
+                    animation-timeline: view();
+                    animation-range: entry 0% contain 30%;
+                }
+            }
+            &.-sc1{
+                animation-timeline: view();
+                animation-range: entry 10% contain 35%;
+                &::after,img{
+                    animation-timeline: view();
+                    animation-range: entry 10% contain 35%;
+                }
+            }
+            &.-sc2{
+                animation-timeline: view();
+                animation-range: entry 15% contain 40%;
+                &::after,img{
+                    animation-timeline: view();
+                    animation-range: entry 15% contain 40%;
+                }
+            }
+            &.-sc3{
+                animation-timeline: view();
+                animation-range: entry 20% contain 45%;
+                &::after,img{
+                    animation-timeline: view();
+                    animation-range: entry 20% contain 45%;
+                }
+            }
+            &.-sc4{
+                animation-timeline: view();
+                animation-range: entry 25% contain 50%;
+                &::after,img{
+                    animation-timeline: view();
+                    animation-range: entry 25% contain 50%;
+                }
+            }
+
+
+            // --------- ループ ---------
+            &.-loop{
+                animation-iteration-count: infinite;
+                &::after,img{
+                    animation-iteration-count: infinite;
+                }
+            }
+
+
+            // --------- シャドウ ---------
+            &.-sh{filter: drop-shadow(2px 2px 2px gray);}
+
+
+        }
+}

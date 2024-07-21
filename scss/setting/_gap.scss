@@ -1,0 +1,244 @@
+
+/* ------------------------------------------------------------------------
+　　　margin 下幅
+		*基本縦方向の幅は、下方側で調整すること。
+		*アンカーリンクの表示調整用には「paddig-top」を使用すること。
+------------------------------------------------------------------------ */
+.mg0{@include min(768){margin: 0 !important;}}
+.mg0s{@include max(768){margin: 0 !important;}}
+
+// 768px以下
+.mgb-20s {@include max(768){margin-bottom: -20% !important;}}
+.mgb-10s {@include max(768){margin-bottom: -10% !important;}}
+.mgb-5s  {@include max(768){margin-bottom: -5% !important;}}
+
+.mgb0s  {@include max(768){margin-bottom: 0 !important;}}
+.mgb1s  {@include max(768){margin-bottom: 1% !important;}}
+.mgb2s  {@include max(768){margin-bottom: 2% !important;}}
+.mgb3s  {@include max(768){margin-bottom: 3% !important;}}
+.mgb4s  {@include max(768){margin-bottom: 4% !important;}}
+.mgb5s  {@include max(768){margin-bottom: 5% !important;}}
+.mgb6s  {@include max(768){margin-bottom: 6% !important;}}
+.mgb7s  {@include max(768){margin-bottom: 7% !important;}}
+.mgb8s  {@include max(768){margin-bottom: 8% !important;}}
+.mgb9s  {@include max(768){margin-bottom: 9% !important;}}
+.mgb10s {@include max(768){margin-bottom: 10% !important;}}
+
+.mgb12s {@include max(768){margin-bottom: 12% !important;}}
+.mgb15s {@include max(768){margin-bottom: 15% !important;}}
+.mgb18s {@include max(768){margin-bottom: 18% !important;}}
+.mgb20s {@include max(768){margin-bottom: 20% !important;}}
+.mgb25s {@include max(768){margin-bottom: 25% !important;}}
+.mgb30s {@include max(768){margin-bottom: 30% !important;}}
+
+// 768px以上
+.mgb-20 {@include min(768){margin-bottom: -20% !important;}}
+.mgb-10 {@include min(768){margin-bottom: -10% !important;}}
+.mgb-5  {@include min(768){margin-bottom: -5% !important;}}
+
+.mgb0   {@include min(768){margin-bottom: 0 !important;}}
+.mgb1   {@include min(768){margin-bottom: 1% !important;}}
+.mgb2   {@include min(768){margin-bottom: 2% !important;}}
+.mgb3   {@include min(768){margin-bottom: 3% !important;}}
+.mgb4   {@include min(768){margin-bottom: 4% !important;}}
+.mgb5   {@include min(768){margin-bottom: 5% !important;}}
+.mgb6   {@include min(768){margin-bottom: 6% !important;}}
+.mgb7   {@include min(768){margin-bottom: 7% !important;}}
+.mgb8   {@include min(768){margin-bottom: 8% !important;}}
+.mgb9   {@include min(768){margin-bottom: 9% !important;}}
+.mgb10  {@include min(768){margin-bottom: 10% !important;}}
+
+.mgb12 {@include min(768){margin-bottom: 12% !important;}}
+.mgb15 {@include min(768){margin-bottom: 15% !important;}}
+.mgb18 {@include min(768){margin-bottom: 18% !important;}}
+.mgb20 {@include min(768){margin-bottom: 20% !important;}}
+.mgb25 {@include min(768){margin-bottom: 25% !important;}}
+.mgb30 {@include min(768){margin-bottom: 30% !important;}}
+
+
+
+/* ------------------------
+　　　margin 左幅
+------------------------ */
+
+// 768px以下
+.mgl1s {@include max(768){margin-left:1% !important;}}
+.mgl2s {@include max(768){margin-left:2% !important;}}
+.mgl3s {@include max(768){margin-left:3% !important;}}
+.mgl4s {@include max(768){margin-left:4% !important;}}
+.mgl5s {@include max(768){margin-left:5% !important;}}
+.mgl6s {@include max(768){margin-left:6% !important;}}
+.mgl7s {@include max(768){margin-left:7% !important;}}
+.mgl8s {@include max(768){margin-left:8% !important;}}
+.mgl9s {@include max(768){margin-left:9% !important;}}
+.mgl10s {@include max(768){margin-left:10% !important;}}
+
+
+// 768px以上
+.mgl1 {@include min(768){margin-left:1% !important;}}
+.mgl2 {@include min(768){margin-left:2% !important;}}
+.mgl3 {@include min(768){margin-left:3% !important;}}
+.mgl4 {@include min(768){margin-left:4% !important;}}
+.mgl5 {@include min(768){margin-left:5% !important;}}
+.mgl6 {@include min(768){margin-left:6% !important;}}
+.mgl7 {@include min(768){margin-left:7% !important;}}
+.mgl8 {@include min(768){margin-left:8% !important;}}
+.mgl9 {@include min(768){margin-left:9% !important;}}
+.mgl10 {@include min(768){margin-left:10% !important;}}
+
+
+
+/* ------------------------
+　　　margin 右幅
+------------------------ */
+
+// 768px以下
+.mgr1s {@include max(768){margin-right:1% !important;}}
+.mgr2s {@include max(768){margin-right:2% !important;}}
+.mgr3s {@include max(768){margin-right:3% !important;}}
+.mgr4s {@include max(768){margin-right:4% !important;}}
+.mgr5s {@include max(768){margin-right:5% !important;}}
+.mgr6s {@include max(768){margin-right:6% !important;}}
+.mgr7s {@include max(768){margin-right:7% !important;}}
+.mgr8s {@include max(768){margin-right:8% !important;}}
+.mgr9s {@include max(768){margin-right:9% !important;}}
+.mgr10s {@include max(768){margin-right:10% !important;}}
+
+// 768px以上
+.mgr1 {@include min(768){margin-right:1% !important;}}
+.mgr2 {@include min(768){margin-right:2% !important;}}
+.mgr3 {@include min(768){margin-right:3% !important;}}
+.mgr4 {@include min(768){margin-right:4% !important;}}
+.mgr5 {@include min(768){margin-right:5% !important;}}
+.mgr6 {@include min(768){margin-right:6% !important;}}
+.mgr7 {@include min(768){margin-right:7% !important;}}
+.mgr8 {@include min(768){margin-right:8% !important;}}
+.mgr9 {@include min(768){margin-right:9% !important;}}
+.mgr10 {@include min(768){margin-right:10% !important;}}
+
+/* ------------------------
+　　　margin 上幅
+------------------------ */
+// 768px以上
+.mgt-2 {@include min(768){margin-top:-2px !important;}}
+
+
+
+/* ------------------------------------------------------------------------
+　　　padding 上幅
+		*アンカーリンクの表示調整用には「paddig-top」を使用すること。
+------------------------------------------------------------------------ */
+
+// 768px以下
+.pdt0s  {@include max(768){padding-top: 0  !important;}}
+.pdt1s  {@include max(768){padding-top: 1% !important;}}
+.pdt2s  {@include max(768){padding-top: 2% !important;}}
+.pdt3s  {@include max(768){padding-top: 3% !important;}}
+.pdt4s  {@include max(768){padding-top: 4% !important;}}
+.pdt5s  {@include max(768){padding-top: 5% !important;}}
+.pdt6s  {@include max(768){padding-top: 6% !important;}}
+.pdt7s  {@include max(768){padding-top: 7% !important;}}
+.pdt8s  {@include max(768){padding-top: 8% !important;}}
+.pdt9s  {@include max(768){padding-top: 9% !important;}}
+.pdt10s {@include max(768){padding-top:10% !important;}}
+
+// 768px以上
+.pdt0  {@include min(768){padding-top: 0  !important;}}
+.pdt1  {@include min(768){padding-top: 1% !important;}}
+.pdt2  {@include min(768){padding-top: 2% !important;}}
+.pdt3  {@include min(768){padding-top: 3% !important;}}
+.pdt4  {@include min(768){padding-top: 4% !important;}}
+.pdt5  {@include min(768){padding-top: 5% !important;}}
+.pdt6  {@include min(768){padding-top: 6% !important;}}
+.pdt7  {@include min(768){padding-top: 7% !important;}}
+.pdt8  {@include min(768){padding-top: 8% !important;}}
+.pdt9  {@include min(768){padding-top: 9% !important;}}
+.pdt10 {@include min(768){padding-top:10% !important;}}
+
+
+
+/* ------------------------
+　　　padding 下幅
+------------------------ */
+
+// 768px以下
+.pdb0s  {@include max(768){padding-bottom: 0  !important;}}
+.pdb1s  {@include max(768){padding-bottom: 1% !important;}}
+.pdb2s  {@include max(768){padding-bottom: 2% !important;}}
+.pdb3s  {@include max(768){padding-bottom: 3% !important;}}
+.pdb4s  {@include max(768){padding-bottom: 4% !important;}}
+.pdb5s  {@include max(768){padding-bottom: 5% !important;}}
+.pdb6s  {@include max(768){padding-bottom: 6% !important;}}
+.pdb7s  {@include max(768){padding-bottom: 7% !important;}}
+.pdb8s  {@include max(768){padding-bottom: 8% !important;}}
+.pdb9s  {@include max(768){padding-bottom: 9% !important;}}
+.pdb10s {@include max(768){padding-bottom:10% !important;}}
+
+// 768px以上
+.pdb0  {@include min(768){padding-bottom: 0  !important;}}
+.pdb1  {@include min(768){padding-bottom: 1% !important;}}
+.pdb2  {@include min(768){padding-bottom: 2% !important;}}
+.pdb3  {@include min(768){padding-bottom: 3% !important;}}
+.pdb4  {@include min(768){padding-bottom: 4% !important;}}
+.pdb5  {@include min(768){padding-bottom: 5% !important;}}
+.pdb6  {@include min(768){padding-bottom: 6% !important;}}
+.pdb7  {@include min(768){padding-bottom: 7% !important;}}
+.pdb8  {@include min(768){padding-bottom: 8% !important;}}
+.pdb9  {@include min(768){padding-bottom: 9% !important;}}
+.pdb10 {@include min(768){padding-bottom:10% !important;}}
+
+
+
+/* ------------------------
+　　　padding 左側
+------------------------ */
+
+// 768px以下
+.pdl0s  {@include max(768){padding-left: 0  !important;}}
+.pdl1s  {@include max(768){padding-left: 1% !important;}}
+.pdl2s  {@include max(768){padding-left: 2% !important;}}
+.pdl3s  {@include max(768){padding-left: 3% !important;}}
+.pdl4s  {@include max(768){padding-left: 4% !important;}}
+.pdl5s  {@include max(768){padding-left: 5% !important;}}
+.pdl6s  {@include max(768){padding-left: 6%  !important;}}
+.pdl7s  {@include max(768){padding-left: 7% !important;}}
+.pdl8s  {@include max(768){padding-left: 8% !important;}}
+.pdl9s  {@include max(768){padding-left: 9% !important;}}
+.pdl10s  {@include max(768){padding-left: 10% !important;}}
+
+// 768px以上
+.pdl0  {@include min(768){padding-left: 0  !important;}}
+.pdl1  {@include min(768){padding-left: 1% !important;}}
+.pdl2  {@include min(768){padding-left: 2% !important;}}
+.pdl3  {@include min(768){padding-left: 3% !important;}}
+.pdl4  {@include min(768){padding-left: 4% !important;}}
+.pdl5  {@include min(768){padding-left: 5% !important;}}
+.pdl6  {@include min(768){padding-left: 6%  !important;}}
+.pdl7  {@include min(768){padding-left: 7% !important;}}
+.pdl8  {@include min(768){padding-left: 8% !important;}}
+.pdl9  {@include min(768){padding-left: 9% !important;}}
+.pdl10  {@include min(768){padding-left: 10% !important;}}
+
+
+
+/* ------------------------
+　　　padding 左側
+------------------------ */
+
+// 768px以下
+.pdr0s  {@include max(768){padding-right: 0  !important;}}
+.pdr1s  {@include max(768){padding-right: 1% !important;}}
+.pdr2s  {@include max(768){padding-right: 2% !important;}}
+.pdr3s  {@include max(768){padding-right: 3% !important;}}
+.pdr4s  {@include max(768){padding-right: 4% !important;}}
+.pdr5s  {@include max(768){padding-right: 5% !important;}}
+
+// 768px以上
+.pdr0  {@include min(768){padding-right: 0  !important;}}
+.pdr1  {@include min(768){padding-right: 1% !important;}}
+.pdr2  {@include min(768){padding-right: 2% !important;}}
+.pdr3  {@include min(768){padding-right: 3% !important;}}
+.pdr4  {@include min(768){padding-right: 4% !important;}}
+.pdr5  {@include min(768){padding-right: 5% !important;}}
+
+.pd0 {padding:0!important;}

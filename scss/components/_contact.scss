@@ -1,0 +1,36 @@
+.contactItem{
+	position: relative;
+	&_main{
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		white-space: nowrap;
+		@include min(768){
+			top: 45%;
+		}
+	}
+	&_sub{
+		position: absolute;
+		top: 70%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		white-space: nowrap;
+		@include min(768){
+			top: 65%;
+		}
+	}
+	&_sub02{
+		position: absolute;
+		top: 70%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		white-space: nowrap;
+		@include min(768){
+			top: 72%;
+		}
+		@include min(1400){
+			top: 65%;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+$breakpoints: (
+    400: 400px,
+    768: 768px,
+    1000: 1000px,
+    1100: 1100px,
+    1200: 1200px,
+    1400: 1400px,
+    1600: 1600px
+);
+@mixin min($breakpoint) {
+    @media(width >= #{map-get($breakpoints, $breakpoint)}){
+        @content;
+    }
+}
+@mixin max($breakpoint) {
+    @media(#{map-get($breakpoints, $breakpoint)} >= width){
+        @content;
+    }
+}
+
+@include max(768){//768px以下
+	.sp{display: block !important;}
+    .tb{display: none !important;}
+	.pc{display: none !important;}
+    .tb-pc{display: none !important;}
+}
+//下記スマホ以上
+@include min(768){//768px以上
+	.sp{display: none !important;}
+    .tb{display: block !important;}
+	.pc{display: none !important;}
+    .tb-pc{display: block !important;}
+}
+@include min(1400){
+    .sp{display: none !important;}
+    .tb{display: none !important;}
+	.pc{display: block !important;}
+    .tb-pc{display: block !important;}
+}

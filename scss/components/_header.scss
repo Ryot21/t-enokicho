@@ -1,0 +1,386 @@
+// ヘッダー
+// #header{
+// 	transition: all 2s;
+// }
+
+.c-header{
+	width: 100vw;
+	height: auto;
+	background: $main-color--w;
+	// padding: 5px 0px 10px;
+	box-sizing: border-box;
+	transition: padding .3s;
+	@include min(768){
+		padding: 15px 0px 0px;
+	}
+	&.-fixed{//固定
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 999;
+	}
+	&-wrapper{
+		position: relative;
+		align-items: center;
+		width: 95%;
+		height: auto;
+		padding: 8px 0px 10px;
+		margin: auto;
+		// background: #bfbebe2e;
+		@include min(768){
+			width: 90%;
+			max-width: 1100px;
+			padding: 0;
+		}
+		@include min(1600){
+			width: 70.4%;
+		}
+		&::after{
+			content: "";
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			width: 100vw;
+			height: 1px;
+			background: $main-color--b;
+		}
+		// ボーダーなし
+		&.-no-b{
+			&::after{
+				background: $main-color--w;
+			}
+		}
+	}
+	&__popArea{//上部
+		width: 100%;
+		height: auto;
+		// height: 125px;
+		.c-header__lists{
+			@include min(768){
+				display: flex;
+				flex-wrap: nowrap;
+			}
+			li{
+				&.logo{
+					width: 50%;
+					height: auto;
+					margin: 0 auto;
+					@include min(768){
+						width: calc(72%);
+						margin: auto;
+						img{vertical-align: baseline;}
+					}
+				}
+				// &.salescopy{
+				// 	width: calc(52%);
+				// 	height: auto;
+				// 	// height: auto;
+				// 	background: rgb(224, 112, 112);
+				// }
+				&.c-header__contactArea{
+					@include max(768){
+						display: none;
+					}
+					@include min(768){
+						display: grid;
+						grid-template-rows: 2.5fr 1fr;
+						grid-template-columns: 1fr 1fr;
+						align-items: center;
+						width: calc(28%);
+						// height: 6vw;
+					}
+					@include min(1600){
+						// height: 7.75vw;
+						// height: 6.45vw;
+					}
+					.top-left{
+						grid-column: 1/2;
+						grid-row: 1/2;
+					}
+					.top-right{
+						grid-column: 2/3;
+						grid-row: 1/2;
+					}
+					.tag{
+						position: relative;
+						grid-column: 1/3;
+						grid-row: 2/3;
+						width: 100%;
+						height: 100%;
+						background: $main-color--w;
+						span{
+							position: absolute;
+							top: 70%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+						}
+					}
+					// ボーダーボタンVer
+					&.-borderVer{
+						position: relative;
+						&::before{
+							content: "";
+							position: absolute;
+							top: 38%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							height: 50%;
+							width: 1px;
+							background: $main-color--b;
+						}
+						&::after{
+							content: "";
+							position: absolute;
+							top: 72%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							height: 1px;
+							width: 98%;
+							background: $main-color--b;
+						}
+						.top-left{
+							span{color: $main-color--b;}
+							&:hover{span{
+								color: $main-color--b !important;
+							}}
+						}
+						.top-right{
+							span{color: $main-color--b;}
+							&:hover{span{
+								color: $main-color--b !important;
+							}}
+						}
+					}
+					// カラーボタンVer
+					&.-colorBoxVer{
+						@include min(768){grid-template-rows: 3.3fr 1fr;}
+						.top-left{
+							background: $site-color01;
+							span{color: $main-color--w !important;}
+							&:hover{
+								opacity: .8;
+							}
+						}
+						.top-right{
+							background: $site-color02;
+							span{color: $main-color--w !important;}
+							&:hover{
+								opacity: .9;
+							}
+						}
+					}
+					// 背景ボタンVer
+					&.-bgImgVer{
+						background: url(../images/item/contact_bg.jpg);
+						background-size: contain;
+						background-repeat: no-repeat;
+						// pointer-events: none;    // カーソルアクションを無効に
+						@include min(768){grid-template-rows: 3.3fr 1fr;}
+						.top-left{
+							position: relative;
+							background: inherit;
+							transition: all .5s;
+							span{
+								color: $main-color--b !important;
+								z-index: 2;
+							}
+							&::after {
+								content: "";
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								width: 95%;
+								height: 90%;
+								background: $main-color--w;
+								z-index: 1;
+								transition: all .5s;
+							}
+							&:hover{
+								background: $main-color--gray;
+								&::after{
+									width: 98%;
+									height: 95%;
+								}
+							}
+						}
+						.top-right{
+							position: relative;
+							transition: all .5s;
+							span{color: $main-color--w !important;}
+							&::after {
+								content: "";
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								width: 90%;
+								height: 90%;
+								background: rgba(255, 255, 255, 0);
+								z-index: 1;
+								transition: all .5s;
+							}
+							&:hover{
+								&::after{
+									width: 98%;
+									height: 95%;
+									background: rgba(255, 255, 255, 0.137);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&__navArea{//下部
+		.c-header__navLists{
+			height: 100%;
+			@include min(768){
+				display: flex;
+				flex-wrap: nowrap;
+				li{
+					position: relative;
+					height: auto;
+					// padding: 2.1% 0;
+					background: $main-color--w;
+					transition: .5s all;
+					&:first-child{
+						&::before{
+							content: "";
+							position: absolute;
+							top: 50%;
+							left: 0;
+							transform: translateY(-50%);
+							height: 100%;
+							width: 1px;
+							background: $main-color--b;
+						}
+					}
+					&::after{
+						content: "";
+						position: absolute;
+						top: 50%;
+						right: 0;
+						transform: translateY(-50%);
+						height: 100%;
+						width: 1px;
+						background: $main-color--b;
+					}
+					a{
+						display: block;
+						width: 100%;
+						height: 100%;
+						padding: 15% 0;
+					}
+					// オプション > ボーダーなし
+					&.-no-b{
+						&::before,
+						&::after{
+							background: $main-color--w;
+						}
+					}
+					// オプション > SOLD OUT
+					&.-grayOutItem{pointer-events: none;}
+				}
+				/*---------------------------------
+					ページ数によってナビゲーション数を変更できる。
+					基本的にheader、navと同数にすること。
+					（物件概要は含まない。）
+				---------------------------------*/
+				&.-col6{
+					li{width: calc(100%/6);}
+				}
+				&.-col7{
+					li{width: calc(100%/7);}
+				}
+				&.-col8{
+					li{width: calc(100%/8);}
+				}
+			}
+		}
+		// アクティブ・ホバーアニメーション変更
+		&.-navColor{// 色
+			.c-header__navLists{
+				@include min(768){
+					li{
+						transition: .5s all;
+						.navItem__link,
+						.d-menu__title{
+							&.-active{
+								background: $site-color01;
+								pointer-events: none;
+								a,span{
+									color: $main-color--w !important;
+								}
+							}
+						}
+						// ホバー関係
+						&:hover{
+							background: $site-color01-hover;
+							.navItem__link,
+							.navItem__link span,
+							.d-menu__title span{color: $main-color--w !important;}
+						}
+						// クリック関係
+						#d-menu__checkbox {
+							display: none;
+							&:checked ~ .d-menu__title {
+								background: $site-color02;
+								a,span{
+									color: $main-color--w !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.-navBorder{// 線
+			.c-header__navLists{
+				@include min(768){
+					li{
+						transition: .5s all;
+						.navItem__link,
+						.d-menu__title{
+							position: relative;
+							&::after{
+								content: "";
+								width: 90%;
+								height: 2.5px;
+								position: absolute;
+								left: 50%;
+								bottom: 1%;
+								transform: translateX(-50%);
+								background: $main-color--w;
+								transition: .5s all;
+							}
+							&.-active{
+								&::after{
+									background: $site-color02;
+								}
+							}
+						}
+						// ホバー関係
+						&:hover{
+							.navItem__link,
+							.d-menu__title{
+								&::after{
+									background: $site-color01;
+								}
+							}
+						}
+						// クリック関係
+						#d-menu__checkbox {
+							display: none;
+							&:checked ~ .d-menu__title:after {
+								background: $site-color02;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

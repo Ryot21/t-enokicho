@@ -1,0 +1,331 @@
+
+// コンテンツ_メインタイトル
+.c-contents_title{// s-L相当
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 0 1px;
+    @include min(768){
+        font-size: clamp(1.6rem, 2vw, 2.5rem);
+    }
+
+    // コンテンツタイトル > 英語表記
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -70%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        font-size: 10px;
+        @include min(768) {
+            bottom: -50%;
+        }
+    }
+    &.-row2  {&::before{@include min(768){ bottom: -30%; }}}
+    &.-row2_s{&::before{@include max(768){ bottom: -40%; }}}
+
+    // コンテンツタイトル > ボーダーライン
+    &.-b-btm{
+        &::after{// 基本設定
+            content: "";
+            display: block;
+            position: relative;
+            bottom: -29px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1100px;
+            height: 1px;
+            background: $main-color--b;
+            @include min(768){
+                bottom: -30px;
+            }
+        }
+        // 色指定
+        &.-c01{&::after{background: $site-color01 !important;}}
+        &.-c02{&::after{background: $site-color02 !important;}}
+        &.-c03{&::after{background: $site-color03 !important;}}
+        &.-c04{&::after{background: $site-color04 !important;}}
+    }
+
+
+    // コンテンツタイトル > 英語表記 > カラー設定
+    &.-en-color01{&::before{color: $site-color01;}}
+    &.-en-color02{&::before{color: $site-color02;}}
+    &.-en-color03{&::before{color: $site-color03;}}
+    &.-en-color04{&::before{color: $site-color04;}}
+
+    // コンテンツタイトル > 英語表記
+    &.-gaikou{&::before{content: "EXTERIOR";}}                                      // 外構・外観
+    &.-naikan{&::before{content: "NTROSPECTION";}}                                  // 内観
+    &.-naikanDesign{&::before{content: "INNER DESIGN";}}                            // 内観デザイン
+
+    &.-layout{&::before{content: "LAYOUT PLAN / PLOT PLAN"; white-space: nowrap;}}  // レイアウト
+    &.-house-layout{&::before{content: "HOUSE LAYOUT"; white-space: nowrap;}}       // ハウスレイアウト
+    &.-plan{&::before{content: "PLAN"; white-space: nowrap;}}                       // プラン
+
+    &.-basinArea{&::before{content: "THE BASIN AREA"; white-space: nowrap;}}        // 水回り
+    &.-kitchen{&::before{content: "KITCHEN";}}                                      // キッチン
+    &.-bathroom{&::before{content: "BATHROOM";}}                                    // お風呂
+    &.-window{&::before{content: "WINDOW";}}                                        // 窓
+    &.-entrance{&::before{content: "ENTRANCE";}}                                    // 玄関
+    &.-ex{&::before{content: "EXTERIOR & COMFORTABLE"; white-space: nowrap;}}       // 設備仕様
+    &.-skyBalcony{&::before{content: "SKY BALCONY"; white-space: nowrap;}}          // スカイバルコニー
+
+    &.-deilyUse{&::before{content: "DAILY USE";}}                                   // 周辺環境
+    &.-access{&::before{content: "ACCESS";}}                                        // アクセス
+    &.-location{&::before{content: "SURROUNDING ENVIRONMENT"; white-space: nowrap;}}// 交通
+    &.-spot{&::before{content: "RECOMMENDED SPOTS"; white-space: nowrap;}}          // スポット
+    &.-portfolio{&::before{content: "CONSTRUCTION PORTFOLIO"; white-space: nowrap;}}// 施工例
+    &.-owner{&::before{content: "OWNER VOICE"; white-space: nowrap;}}               // オーナー
+
+    &.-sample{&::before{content: "CONTENT TITLE"; white-space: nowrap;}}            // サンプル
+}
+
+// コンテンツ_メインタイトル
+.c-contents_MainTitle{// .s-L相当
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 0 1px;
+    @include min(768){
+        font-size: clamp(1.6rem, 2vw, 2.2rem);
+    }
+
+    // メインタイトル > アイコン
+    &.-icon{
+        &::after{
+            content: "";
+            background: url(../images/logo/page-title-icon.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translateY(-50%);
+            @include min(768){
+                top: 53%;
+                left: 0;
+                width: 20px;
+                height: 20px;
+            }
+            @include min(1400){
+                top: 56%;
+            }
+        }
+
+        // アイコンが複数ある場合
+        &.-ver01{&::after{background: url(../images/logo/page-title-icon.png);}}
+        &.-ver02{&::after{background: url(../images/logo/page-title-icon02.png);}}
+        &.-ver03{&::after{background: url(../images/logo/page-title-icon03.png);}}
+        &.-ver04{&::after{background: url(../images/logo/page-title-icon04.png);}}
+
+        // 2行の場合
+        &.-row02{  //(sp/tb-pc)
+            &::after{
+                top: 30%;
+                @include min(768){
+                    top: 27%;
+                }
+            }
+        }
+        &.-row02_s{//(sp)
+            &::after{
+                @include max(768){
+                    top: 28%;
+                }
+            }
+        }
+        &.-row03_s{
+            &::after{
+                @include max(768){
+                    top: 17%;
+                }
+            }
+        }
+    }
+}
+
+// コンテンツ_サブタイトル
+.c-contents_subTitle{
+    position: relative;
+    &::before{// ボーダー系
+        content: "";
+        display: block;
+        position: absolute;
+    }
+    &::after{// アイコン系
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        @include min(768){
+            left: 0;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    span{padding:0 5px 0 5px;}
+    &.-icon{
+        &::after{
+            content: "";
+            background: url(../images/logo/accent-icon.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 3px;
+            height: 15px;
+            position: absolute;
+            top: 55%;
+            left: 0%;
+            transform: translateY(-50%);
+            @include min(768){
+                top: 53%;
+                left: 0;
+                width: 5px;
+                height: 20px;
+                background-size: contain;
+            }
+            @include min(1400){
+                top: 56%;
+            }
+        }
+        // アイコンが複数ある場合
+        &.-ver01{&::after{
+            background: url(../images/logo/accent-icon01.png);
+            background-size: contain;
+        }}
+        &.-ver02{&::after{
+            background: url(../images/logo/accent-icon02.png);
+            background-size: contain;
+        }}
+        &.-ver03{&::after{
+            background: url(../images/logo/accent-icon03.png);
+            background-size: contain;
+        }}
+        &.-ver04{&::after{
+            background: url(../images/logo/accent-icon04.png);
+            background-size: contain;
+        }}
+
+        // 2行の場合
+        &.-row02{  //(sp/tb-pc)
+            &::after{
+                top: 30%;
+                @include min(768){
+                    top: 27%;
+                }
+            }
+        }
+        &.-row02_s{//(sp)
+            &::after{
+                @include max(768){
+                    top: 28%;
+                }
+            }
+        }
+    }
+    &.-iconBox{
+        padding-left: 5%;
+        @include min(768){
+            padding-left: 8%;
+        }
+        &::after{
+            background-image: url(../images/logo/icon_box.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        // 指定のテキスト内 > フォントサイズが異なる場合に使用すること。
+        //（基本全体に小さいサイズ、要素には大きいサイズをすること。）
+        &.-iconBtm{
+            &::after{
+                top: auto;
+                bottom: 22%;
+                transform: inherit;
+                @include min(768){bottom: 13%;}
+            }
+        }
+    }
+    &.-stationBox{
+        padding-left: 15%;
+        @include min(768){
+            padding-left: 15%;
+        }
+        @include min(1400){
+            padding-left: 12%;
+        }
+        &.-ver02{// 駅名「」無しVer
+            padding-left: 17%;
+            @include min(768){
+                padding-left: 15%;
+            }
+            @include min(1400){
+                padding-left: 12%;
+            }
+        }
+        // 一駅の場合
+        &.-s_1 {
+            &::after{
+                content: "西武池袋線";
+                top: 42%;
+                font-size: 10px;
+                text-align: center;
+                width: 16%;
+                @include min(768){
+                    top: 65%;
+                    font-size: 10px;
+                    width: 16%;
+                }
+                @include min(1400){
+                    top: 56%;
+                    font-size: 12px;
+                    width: 13%;
+                }
+            }
+        }
+        // 二駅の場合
+        &.-s_2 {
+            &::after{
+                content: "西武秩父線 JR八高線";
+                top: 0%;
+                font-size: 10px;
+                text-align: center;
+                width: 16%;
+                @include min(768){
+                    top: 38%;
+                    font-size: 10px;
+                    text-align: center;
+                    width: 16%;
+                }
+                @include min(1400){
+                    top: 38%;
+                    width: 13%;
+                    font-size: 12px;
+                }
+            }
+        }
+
+    }
+
+    &.-borderBtm{
+        margin-bottom: 3%;
+        @include min(768){
+            margin-bottom: 3%;
+        }
+        &::before{
+            bottom: -15%;
+            left: 50%;
+            transform: translateX(-50%) scaleY(0.75);
+            width: 100%;
+            color: $main-color--b;
+        }
+        // アイコン文頭にある場合のみ、ボーダーの位置を変更する。
+        &.-dot{&::before{border-bottom: 3px dotted;}}
+        &.-line{&::before{border-bottom: 1px solid;}}
+    }
+}

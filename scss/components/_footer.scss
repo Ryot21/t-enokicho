@@ -1,0 +1,400 @@
+// フッター
+.c-footer{
+	width: 100vw;
+	height: auto;
+	margin-bottom: 20%;
+	@include min(768){
+		margin-bottom: 5%;
+	}
+	&-wrapper{
+		align-items: center;
+		width: 90%;
+		margin: auto;
+		height: auto;
+		// background: #bfbebe2e;
+		@include min(768){
+			width: 90%;
+			max-width: 1100px;
+		}
+		@include min(1600){
+			width: 70.4%;
+		}
+		&.-v02{
+			@include max(768){
+				width: 90%;
+			}
+		}
+		&::after{
+			content: "";
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			width: 100vw;
+			height: 1px;
+			background: $main-color--b;
+		}
+	}
+	&__contactArea{
+		.c-footer__contactLists{
+			position: relative;
+			display: flex;
+			flex-wrap: nowrap;
+			&::before{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100vw;
+				height: 1px;
+				background: $main-color--b;
+				z-index: 1;
+			}
+			&::after{
+				content: "";
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				transform: translateX(-50%);
+				width: 100vw;
+				height: 1px;
+				background: $main-color--b;
+			}
+			&.-colors_04{
+				li{
+					&:hover{
+						&:nth-child(1){background: $site-color01;}
+						&:nth-child(2){background: $site-color02;}
+						&:nth-child(3){background: $site-color03;}
+						&:nth-child(4){background: $site-color04;}
+					}
+				}
+			}
+			li{
+				position: relative;
+				width: calc(100%/2);
+				height: auto;
+				transition: .5s all;
+				@include min(768){
+					width: calc(100%/4);
+				}
+				&:hover{
+					background: $site-color01;
+					a,span{color: $main-color--w !important;}
+				}
+				&:first-child{
+					&::before{
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: 0;
+						transform: translateY(-50%);
+						height: 100%;
+						width: 1px;
+						background: $main-color--b;
+					}
+				}
+				&::after{
+					content: "";
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translateY(-50%);
+					height: 100%;
+					width: 1px;
+					background: $main-color--b
+				}
+				a{
+					display: block;
+					padding: 12% 0;
+					@include min(768){
+						padding: 20% 0;
+					}
+				}
+				// SOLD OUT時に使用する
+				&.-grayOutItem{
+					pointer-events: none;
+				}
+			}
+		}
+	}
+	&__navArea{
+		.c-footer__navLists{
+			display: flex;
+			flex-wrap: nowrap;
+			@include max(768){
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			li{
+				position: relative;
+				height: auto;
+				padding: 2.1% 0;
+				a{
+					display: block;
+					// アクティブ時
+					&.-active{
+						pointer-events: none;
+						span{
+							color: $site-color02;
+							&::after{
+								width: 100%;
+								height: 1px;
+								background: $site-color02;
+							}
+						}
+					}
+				}
+
+				&:first-child{
+					&::before{
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: 0;
+						transform: translateY(-50%);
+						height: 40%;
+						width: 1px;
+						background: $main-color--b;
+						@include min(768){
+							height: 25%;
+						}
+					}
+				}
+				&::after{
+					content: "";
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translateY(-50%);
+					height: 40%;
+					width: 1px;
+					background: $main-color--b;
+					@include min(768){
+						height: 25%;
+					}
+				}
+				span{
+					position: relative;
+					transition: all 1s;
+					&::after{
+						content: "";
+						position: absolute;
+						bottom: -2px;
+						left: 50%;
+						transform: translateX(-50%);
+						width: 10%;
+						height: 1px;
+						background: $main-color--w;
+						transition: .5s all;
+					}
+				}
+
+
+				// ホバー関係
+				&:hover{
+					span{
+						color: $site-color01;
+						&::after{
+							width: 100%;
+							background: $site-color01;
+						}
+					}
+				}
+
+				// オプション > 非アクセス
+				&.-grayOutItem{
+					pointer-events: none;
+					span{opacity: .2;}
+				}
+			}
+			// ページ数によってナビゲーション数を変更できる。(header、navと同数にすること。)
+			&.-col5{
+				li{
+					width: calc(100%/3);
+					@include max(768){
+						&:nth-child(4){
+							&::before{
+								content: "";
+								position: absolute;
+								top: 59%;
+								left: 0;
+								transform: translateY(-50%);
+								height: 40%;
+								width: 1px;
+								background: $main-color--b;
+							}
+						}
+					}
+					@include min(768){width: calc(100%/5);}
+				}
+			}
+			&.-col6{
+				li{
+					width: calc(100%/3);
+					@include max(768){
+						&:nth-child(4){
+							&::before{
+								content: "";
+								position: absolute;
+								top: 59%;
+								left: 0;
+								transform: translateY(-50%);
+								height: 40%;
+								width: 1px;
+								background: $main-color--b;
+							}
+						}
+					}
+					@include min(768){width: calc(100%/6);}
+				}
+			}
+			&.-col7{
+				li{
+					width: calc(100%/4);
+					@include max(768){
+						&:nth-child(5){
+							&::before{
+								content: "";
+								position: absolute;
+								top: 59%;
+								left: 0;
+								transform: translateY(-50%);
+								height: 40%;
+								width: 1px;
+								background: $main-color--b;
+							}
+						}
+					}
+					@include min(768){width: calc(100%/7);}
+				}
+			}
+			&.-col8{
+				li{
+					width: calc(100%/4);
+					@include max(768){
+						&:nth-child(5){
+							&::before{
+								content: "";
+								position: absolute;
+								top: 59%;
+								left: 0;
+								transform: translateY(-50%);
+								height: 40%;
+								width: 1px;
+								background: $main-color--b;
+							}
+						}
+					}
+					@include min(768){width: calc(100%/8);}
+				}
+			}
+		}
+	}
+	&__btnArea{// 概要ボタンエリア
+		width: 45%;
+		margin: auto;
+		@include min(768){
+			width: 20%;
+			max-width: 300px;
+		}
+		&.-col2{// 新築戸建 ＋ 建築条件付土地
+			width: 80%;
+			margin: auto;
+			@include min(768){
+				width: 50%;
+				max-width: 550px;
+			}
+		}
+		label{
+			&.popup{
+				display: block;
+				padding: 5% 0;
+				text-align: center;
+				transition: .5s all;
+				span{transition: .5s all;}
+				// カラー制御
+				&.-color01{// サイトカラー01に順ずる
+					color: $main-color--w !important;
+					border: 1px solid $site-color01;
+					background: $site-color01;
+					@include min(768){
+						color: $site-color01 !important;
+						background: $main-color--w;
+					}
+					span{
+						color: $main-color--w;
+						@include min(768){
+							color: $site-color01;
+						}
+					}
+					&:hover{
+						color: $main-color--w !important;
+						background: $site-color01 !important;
+						box-shadow: 3px 3px 10px rgba(133, 133, 133, 0.295);
+						span{color: $main-color--w !important;}
+					}
+				}
+				&.-color02{//サイトカラー02に順ずる
+					color: $main-color--w !important;
+					border: 1px solid $site-color02;
+					background: $site-color02;
+					@include min(768){
+						color: $site-color02 !important;
+						background: $main-color--w;
+					}
+					span{
+						color: $main-color--w;
+						@include min(768){
+							color: $site-color02;
+						}
+					}
+					&:hover{
+						color: $main-color--w !important;
+						background: $site-color02 !important;
+						box-shadow: 3px 3px 10px rgba(133, 133, 133, 0.295);
+						span{color: $main-color--w !important;}
+					}
+				}
+
+				// ホバー > 角丸
+				&.-r{&:hover{border-radius: 30px;}}
+			}
+		}
+	}
+	&__shopArea{// 支店情報エリア
+		width: 60%;
+		margin: auto;
+		@include min(768){
+			width: 40%;
+			max-width: 1000px;
+		}
+		.c-footer__shopFlex{
+			display: flex;
+			flex-wrap: wrap;
+			@include min(768){
+				flex-wrap: nowrap;
+				justify-content: center;
+			}
+			li{
+				width: 100%;
+				&:nth-child(1){
+					@include max(768){
+						padding: 0 5%;
+						margin-bottom: 5%;
+					}
+					@include min(768){
+						width: 40%;
+					}
+				}
+				&:nth-child(2){
+					@include min(768){
+						width: 60%;
+						padding-left: 5%;
+					}
+				}
+			}
+		}
+	}
+}

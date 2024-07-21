@@ -1,0 +1,347 @@
+// ナビゲーション
+.c-hnav{
+	position: sticky;
+	top: 3%;
+    left: 86%;
+	width: 33px;
+	height: 0;
+	// opacity: .7;
+	z-index: 998;
+	@include min(768){
+		top: 1.5%;
+		left: 94%;
+		opacity: .7;
+	}
+	@include min(1200){
+		left: 95.5%;
+	}
+	&__cheakbox{
+		display: none;
+		&:checked ~ .c-hnav__close{
+			display: block;
+			opacity: 0.5;
+		}
+		&:checked ~ .c-hnav__content{
+			transform: translateX(0%);
+			box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+		}
+	}
+	&__button{
+		display: inline-block;
+		width: 34px;
+		height: 27px;
+		vertical-align: middle;
+		cursor:pointer;
+		@include min(768){
+			width: 100%;
+		}
+		span,
+		span:before,
+		span:after{
+			content: "";
+			display: block;
+			position: absolute;
+			height: 3px;
+			width: 33px;
+			border-radius: 3px;
+			background: $main-color--b;
+			// filter: drop-shadow(0px 0px 1px $main-color--w);
+			cursor: pointer;
+			@include min(768){
+				width: 100%;
+			}
+		}
+		span:before {
+			bottom: -12px;
+		}
+		span:after {
+			bottom: -24px;
+		}
+		p{
+			position: absolute;
+			bottom: -72%;
+			left: 50%;
+			transform: translateX(-50%);
+			filter: drop-shadow(0px 0px .5px $main-color--w);
+			@include min(768){
+				bottom: -100%;
+				filter: drop-shadow(0px 0px 2px $main-color--w);
+			}
+		}
+	}
+	&__close {
+		display: none;
+		position: fixed;
+		z-index: 99;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $main-color--b;
+		opacity: 0;
+		transition: 0.3s ease-in-out;
+	}
+	&__content{
+		overflow: auto;
+		position: fixed;
+		top: 0;
+		right: 0;
+
+		/* ハンバーガーメニュー内の幅 */
+		width: 55%;
+		max-width: 230px;
+		height: 100%;
+		padding: 5% 5% 0 5%;
+		background: $main-color--w;
+
+		/* 滑らかに表示 */
+		transition: 0.3s ease-in-out;
+		transform: translateX(100%);
+		z-index: 9999;
+		@include min(768){
+			width: 29%;
+			max-width: 230px;
+			padding: 2% 2.5% 2% 2.5%;
+			background: $main-color--w;
+		}
+		@include min(1400){
+			width: 90%;
+			max-width: 330px;
+		}
+		li{
+			margin-bottom: 7px;
+			transition: .5s all;
+			@include min(768){margin-bottom: 10px;}
+			@include min(1400){margin-bottom: 10px;}
+			a, label{
+				position: relative;
+				transition: .5s all;
+				span{transition: .5s all;}
+				&.-active{
+					position: relative;
+					color: $site-color02;
+					font-weight: bold;
+					pointer-events: none;
+					span{color: $site-color02;}
+					filter: drop-shadow(1px 1px 0px hsla(0, 0%, 0%, 0.322));
+					pointer-events: none;
+					&::after{
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: -14px;
+						transform: translateY(-50%);
+						width: 12px;
+						height: 12px;
+						background-image: url(../images/logo/page-title-icon.png);
+						background-size: contain;
+						background-repeat: no-repeat;
+						@include min(768){
+							left: -12px;
+							width: 10px;
+							height: 10px;
+						}
+						@include min(1200){
+							top: 47%;
+							left: -17px;
+							width: 15px;
+							height: 15px;
+						}
+						@include min(1400){
+							width: 13px;
+							height: 13px;
+						}
+					}
+				}
+			}
+			label{color: $main-color--b;}
+			&:hover{a, label,span{color: $site-color01;}}
+		}
+	}
+	&__contactArea{
+		position: relative;
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		height: 100px;
+		margin: auto;
+		border: 1px solid $main-color--b;
+		@include min(768){
+			top: 47%;
+			height: 105px;
+		}
+		@include min(1400){
+			height: 110px;
+		}
+		.c-hnav__top{
+			grid-column: 1/3;
+			grid-row: 1/2;
+			transition: .5s all;
+			&:hover{
+				background: $site-color02;
+				span{color: $main-color--w;}
+			}
+		}
+		.c-hnav__bottom{
+			display: block;
+			grid-column: 1/3;
+			grid-row: 2/3;
+			transition: .5s all;
+			&:hover{
+				background: $site-color01;
+				span{color: $main-color--w;}
+			}
+		}
+		&::after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 1px;
+			width: 98%;
+			background: $main-color--b;
+		}
+		// SOLD OUT時に使用する
+		&.-grayOutItem{
+			pointer-events: none;
+		}
+	}
+	&__logo{
+		position: absolute;
+		bottom: 0%;
+		left: 73%;
+		transform: translateX(-50%);
+		width: 30%;
+	}
+	&__icon{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 11%;
+	}
+}
+
+// ナビゲーション関係
+.navItem{
+	position: relative;
+
+	// ナビゲーションボタン
+	&-title{
+		&.-main{// 基本日本語
+			position: absolute;
+			top: 35%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			white-space: nowrap;
+			transition: .5s all;
+			@include min(768){top: 33%;}
+		}
+		&.-sub{// 基本英語
+			position: absolute;
+			top: 65%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			white-space: nowrap;
+			transition: .5s all;
+			// @include min(768){top: 65%;}
+		}
+	}
+
+	// お問い合わせボタン
+	&-cTitle{
+		&.-main{// 基本日本語
+			position: absolute;
+			top: 35%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			white-space: nowrap;
+			transition: .5s all;
+			@include min(768){top: 37%;}
+		}
+		&.-sub{// 基本日本語
+			position: absolute;
+			top: 67%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			white-space: nowrap;
+			transition: .5s all;
+			@include min(768){top: 64%;}
+			@include min(1400){top: 65%;}
+		}
+	}
+
+	// オプション > 後日実装コンテンツ
+	&.-comingSoon{
+		pointer-events: none;
+		a{
+			pointer-events: none;
+			&::before{
+				content: "coming soom";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 60% !important;
+				color: white;
+				// background: #e40012;
+				background: $site-color01;
+				display: block;
+				z-index: 1;
+				text-align: center;
+				padding: 3px 0 4px;
+				opacity: 0.9;
+			}
+			span{opacity: .5;}
+		}
+	}
+	// オプション > 売り切れコンテンツ
+	&.-soldOut{
+		pointer-events: none;
+		a{
+			pointer-events: none;
+			&::before{
+				content: "sold out";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 60% !important;
+				color: white;
+				// background: #e40012;
+				background: $main-color--Dgray;
+				display: block;
+				z-index: 1;
+				text-align: center;
+				padding: 3px 0 4px;
+				opacity: 0.9;
+			}
+			span{opacity: .5;}
+		}
+	}
+	// オプション > 完売御礼
+	&.-kanbai{
+		pointer-events: none;
+		a{
+			pointer-events: none;
+			&::before{
+				content: "完売御礼";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 60% !important;
+				color: white;
+				// background: #e40012;
+				background: rgb(216, 21, 21);
+				display: block;
+				z-index: 1;
+				text-align: center;
+				padding: 3px 0 4px;
+				opacity: 0.9;
+			}
+			span{opacity: .5;}
+		}
+	}
+}

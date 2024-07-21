@@ -1,0 +1,91 @@
+
+/* ---------------------------------
+    画像：ホバー > 画像拡大
+--------------------------------- */
+.a-zoomImg{
+    .imgBox{
+        // background: black;
+        overflow: hidden;
+        transition: 3s all;
+        img{
+            transform: scale(1.01);
+            transition: 1s all;
+        }
+    }
+    &:hover{
+        .imgBox{img{transform: scale(1.05);}}
+        a{box-shadow: 0px 3px 6px 1px rgb(0 0 0 / 34%);}
+    }
+    &.-after{
+        img{overflow: hidden;}
+        &::after{
+            transform: scale(1.01);
+            transition: 1s all;
+        }
+        &:hover{
+            &::after{transform: scale(1.05);}
+        }
+    }
+}
+
+
+/* ---------------------------------
+    ファーストビュー > 画像縮小
+--------------------------------- */
+.a-fviewOutImg{
+    overflow: hidden;
+    transition: 4s all;
+    img{
+        animation-name: ZoomOut;
+        animation-fill-mode:forwards;
+        animation-duration:1s;
+        transform: scale(1.01);
+    }
+}
+@keyframes ZoomOut{
+    0% {
+        transform: scale(1.1);
+        opacity: .95;
+    }
+    100% {
+        transform: scale(1.01);
+        opacity: 1;
+    }
+}
+/* ---------------------------------
+    ファーストビュー > 画像拡大
+--------------------------------- */
+.a-fviewInImg{
+    overflow: hidden;
+    transition: 4s all;
+    img{
+        animation-name: ZoomIn;
+        animation-fill-mode:forwards;
+        animation-duration:1s;
+        transform: scale(1.01);
+    }
+}
+@keyframes ZoomIn{
+    0% {
+        transform: scale(.95);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: .95;
+    }
+}
+
+/* ---------------------------------
+    スクロール > 画像拡大
+--------------------------------- */
+.a-scOutImg{
+    width: 100%;
+    overflow: hidden;
+    transition: 4s all;
+    img{
+        animation-name: ZoomOut;
+        animation-fill-mode:forwards;
+        transform: scale(1.5);
+    }
+}

@@ -1,0 +1,463 @@
+
+
+// --------- 通常 -----------
+.swiper{
+    z-index: 0;
+    .swiper-wrapper{
+        // padding-bottom: 20px;
+        // @include min(768){
+        //     padding-bottom: 30px;
+        // }
+        .swiper-slide{
+            text-align: end;
+            opacity: .5;
+            overflow: hidden;
+            transition: .5s all;
+            img{
+                width: 100%;
+                height: auto;
+                pointer-events: auto;
+                @include min(768){
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            a{
+                display: block;
+                color: $main-color--b;
+                background: $main-color--w;
+                font-weight: bold;
+                overflow: hidden;
+                img{
+                    transition: .5s all;
+                    @include max(768){
+                        color: $main-color--b;
+                        margin-right: 9vw;
+                    }
+                    &::after{
+                        @include max(768){
+                            background: $main-color--b;
+                        }
+                    }
+                }
+                &:hover{
+                    color: $main-color--beige;
+                    img{
+                        transform: scale(1.05);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    // ファーストビュー用 > スライダー
+    &.swiper-Fview{
+        @include max(768){
+            // position: absolute;
+            // top: 0;
+        }
+        .swiper-slide{
+            .imgBox img,
+            .zoomIn,
+            .zoomOut {transition: 5s all;}
+            .fadeLeft,
+            .fadeRight{transition: 5s all;}
+
+            &-active{//アクティブ時のアクション
+
+                .zoomIn {// 徐々に『拡大』される
+                    transform: scale(1.1);
+                    @include min(768){
+                        transform: scale(1.03);
+                    }
+                }
+                .zoomOut{// 徐々に『縮小』される
+                    transform: scale(0.95);
+                    @include min(768){transform: scale(0.97);}
+                }
+                .fadeLeft {transform: translateX(-10%);}// 徐々に『左』に進む
+                .fadeRight{transform: translateX(10%);}// 徐々に『右』に進む
+            }
+        }
+    }
+    // サムネイル連動スライダー
+    &.swiperMain{// メイン
+        .swiper-slide{
+            @include max(768){
+                height: 80% !important;
+                max-height: 280px;
+                img{
+                    object-fit: cover;
+                    object-position: right 0 bottom 20px;
+                }
+            }
+        }
+    }
+    &.swiperThumbnail{// サムネイル
+        .swiper-slide{
+            transform: scale(.8);
+            img{
+                pointer-events: auto !important;
+            }
+            &-thumb-active{
+                // border: 1px solid $main-color--b;
+                opacity: 1;
+                transform: scale(1) !important;
+            }
+            &:hover{
+                // border: 1px solid $main-color--b;
+                // opacity: .5;
+                transform: scale(.9);
+            }
+        }
+        .swiper-pagination{
+            // bottom: var(--swiper-pagination-bottom, -20px);
+            bottom: 0;
+            left: 51%;
+            transform: translateX(-50%);
+            @include min(768){
+                bottom: 0px;
+            }
+            &-bullet{
+                border-radius: 4px;
+                transform: scaleX(1);
+                transition: .5s all;
+                @include min(768){
+                    border-radius:1px;
+                }
+                span{
+                    display: inline-block;
+                }
+                &-active{
+                    width: 50px;
+                    background: $main-color--gray !important;
+                    border: 1px solid $main-color--b !important;
+                    @include min(768){
+                        background: $main-color--b !important;
+                    }
+                }
+            }
+        }
+    }
+    // 施工例用 > スライダー
+    &.swiper-Build,
+    &.swiper-Video{
+        width: 100%;
+        height: 100%;
+        // position: inherit;
+        .swiper-slide{
+            transform: scale(.8);
+            img{
+                pointer-events: auto !important;
+            }
+            &-active{
+                opacity: 1;
+                transform: scale(1) !important;
+            }
+            &:hover{
+                opacity: 1;
+                transform: scale(.9);
+            }
+        }
+        .swiper-pagination{
+            bottom: 0;
+            left: 51%;
+            transform: translateX(-50%);
+            @include min(768){
+                bottom: 0px;
+            }
+            &-bullet{
+                border-radius: 4px;
+                transform: scaleX(1);
+                transition: .5s all;
+                @include min(768){
+                    border-radius:1px;
+                }
+                span{
+                    display: inline-block;
+                }
+                &-active{
+                    width: 50px;
+                    background: $main-color--gray;
+                    border: 1px solid $main-color--b;
+                    @include min(768){
+                        background: $main-color--b;
+                    }
+                }
+            }
+        }
+    }
+
+    // 次に進む・前に戻るボタン
+    .swiper-button{
+        &-prev,
+        &-next{
+            &::after{
+                color: $main-color--gray !important;
+                // filter: drop-shadow(1px 1px 3px black);
+                @include min(768){
+                }
+            }
+            &.-delta{
+                &::after{
+                    background-repeat: no-repeat;
+                    width: 15px;
+                    height: 15px;
+                    @include min(768){
+                        width: 25px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+
+        // 三角のボタン
+        &-prev{
+            &.-delta{
+                @include min(768) {left: 30%;}
+                @include min(1000){left: 30%;}
+                &::after{
+                    content: "";
+                    background-image: url(../images/slider/item/SVG/leftBtn.svg);
+                }
+            }
+        }
+        &-next{
+            &.-delta{
+                @include min(768) {right: 30%;}
+                @include min(1000){right: 30%;}
+                &::after{
+                    content: "";
+                    background-image: url(../images/slider/item/SVG/rightBtn.svg);
+                }
+            }
+        }
+    }
+
+    // 各スライダー > 共通パーツ > ドット
+    .swiper-pagination{
+        &.-type01{
+            .swiper-pagination-bullet{
+                box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.692);
+                transition: all 1s;
+            }
+            .swiper-pagination-bullet-active {
+                width: 20px;
+                border-radius: 5px;
+                background: $site-color02;
+            }
+        }
+    }
+}
+
+// --------- 設備・仕様 -----------
+.swiper-title{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    @include min(768){width: 85%;}
+    .balloon2{
+        position: absolute;
+        top: 33%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 19%;
+        height: auto;
+        border-radius: 50%;
+        @include min(768){
+            top: 30%;
+            width: 15%;
+            max-width: 150px;
+        }
+        &.-site-balloon-c{
+            background: $site-balloon-color;
+        }
+    }
+    .balloon3{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 19%;
+        height: auto;
+        border-radius: 50%;
+        @include min(768){
+            width: 15%;
+            max-width: 150px;
+        }
+        &.-site-balloon-c{
+            background: $site-balloon-color;
+        }
+    }
+}
+.swiperArea{
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    .swiper-container{
+        @include min(768){
+            padding: 0 40px;
+        }
+        &.card-swiper{// カードレイアウト
+            margin-bottom: 80px;
+            &:last-child{
+                margin-bottom: 30px;
+                @include min(768){
+                    margin-bottom: 80px;
+                }
+            }
+
+            &.-sliderItem01{//画像の大きさで変えること
+                .swiper-button-next,
+                .swiper-button-prev {
+
+                    width: 45px; /* 背景画像の幅を必ず指定 */
+                    height: 45px; /* 背景画像の高さを必ず指定 */
+                    transform: translateY(-50%);
+                    background: gray;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    opacity: 1;
+                    transition: all .5s;
+                    z-index: 6 !important;
+                    @include max(400){
+                        top: 50%;
+                        transform: scale(.5, .5) translateY(-50%);
+                    }
+                    @include min(768){
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &::after {
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                        content: ""; /* 空指定してデフォルトの矢印を消す */
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                    }
+                    &:hover{
+                        opacity: .8;
+                    }
+                }
+                .swiper-button-prev {
+                    @include max(400){
+                        left: -10px;
+                    }
+                    &::after {
+                        border-width: 11px 14px 11px 0;
+                        border-color: transparent #fff transparent transparent;
+                        right: 25%;
+                    }
+                  }
+                .swiper-button-next {
+                    @include max(400){
+                        right: -10px;
+                    }
+                    &::after {
+                      border-width: 11px 0 11px 14px;
+                      border-color: transparent transparent transparent #fff;
+                      left: 55%;
+                    }
+                }
+            }
+        }
+        .swiper-pagination {//ページネーションの位置
+            bottom: 4.5%;
+            z-index: 5 !important;
+
+            @include min(768){
+                bottom: 7%;
+            }
+
+            .swiper-pagination-bullet-active{//現在地表示に関しての記述
+                background: $site-color01;
+            }
+            .swiper-pagination-bullet{//ドットの大きさに関する記述
+                transition: .5s all;
+                @include min(768){
+                    width: .8vw;
+                    height: .8vw;
+                    margin: 0 .8vw;
+                }
+                &:hover{
+                    background: $site-color01-hover;
+                }
+            }
+        }
+        &.thumbnail{
+            width: 100%;
+            .swiper-wrapper{
+                @include max(400){
+                    justify-content: space-between;
+                }
+            }
+            .swiper-slide{
+                &.s-item{
+                    width: calc( 33.3333% - 5px) !important;
+                    height: auto;
+                    padding: 0 2.5px;
+                    margin-bottom: 5px;
+
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                    &.r-01{
+                    }
+                    &.r-02{
+                    }
+                    &.r-03{
+                    }
+                    &.r-04{
+                    }
+                    &.r-05{
+                    }
+                    &.r-06{
+                    }
+                }
+            }
+        }
+    }
+}
+.card{
+    width: 365px;
+    height: auto;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+.card-L{
+    width: 85%;
+    height: auto;
+    margin: auto;
+    @include min(768){
+        width: 95%;
+        max-width: 1260px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+.g-sliderBox01{
+    .swiper-pagination {
+        @include max(400){
+            bottom: 49.7% !important;
+        }
+    }
+}
+.washatendArea{margin: 0 auto 90px;}
+
+.thumbnail .swiper-slide{
+  cursor: pointer;
+  opacity: .7;
+}
+
+.thumbnail .swiper-slide-thumb-active{
+  opacity: 1;
+}
+

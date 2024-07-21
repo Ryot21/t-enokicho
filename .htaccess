@@ -1,0 +1,5 @@
+
+AuthType Basic
+AuthName "Input your ID and Password."
+AuthUserFile /var/www/html/jyu-g/template_html/.htpasswd
+require valid-user

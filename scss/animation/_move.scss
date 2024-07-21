@@ -1,0 +1,69 @@
+
+
+
+.a{
+    /* ---------------------------------------
+        大きくなるアニメーション
+    --------------------------------------- */
+    &-moveUp{animation-name: moveUpAnime;}
+        @keyframes moveUpAnime{
+            0% {
+                transform: translateY(0px) scale(1);
+                opacity: 1;
+            }
+            50%{
+                transform: translateY(0px) scale(1.1);
+                opacity: .8;
+            }
+            100% {
+                transform: translateY(0px) scale(1);
+                opacity: 1;
+            }
+        }
+
+    /* ---------------------------------------
+        小さくなるアニメーション
+    --------------------------------------- */
+    &-moveDown{animation-name: moveDownAnime;}
+        @keyframes moveDownAnime{
+            0% {
+                transform: translateY(0px) scale(1);
+                opacity: 1;
+            }
+            50%{
+                transform: translateY(0px) scale(.9);
+                opacity: .8;
+            }
+            100% {
+                transform: translateY(0px) scale(1);
+                opacity: 1;
+            }
+        }
+
+    /* ---------------------------------------
+        小さくなるアニメーション
+    --------------------------------------- */
+    &-moveLoop{animation-name: moveLoopAnime;}
+        @keyframes moveLoopAnime{
+            0% {
+                transform: translateY(0px) scale(.9);
+                opacity: 1;
+            }
+            20% {
+                transform: translateY(0px) scale(.9);
+                opacity: 1;
+            }
+            50%{
+                transform: translateY(0px) scale(1);
+                opacity: .9;
+            }
+            80% {
+                transform: translateY(0px) scale(.9);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0px) scale(.9);
+                opacity: 1;
+            }
+        }
+}

@@ -1,0 +1,79 @@
+// Sass Document
+@charset "UTF-8";
+// 基本設定
+@import "./setting/reset";      // リセットCSS
+@import "./setting/color";      // カラー変数
+@import "./setting/structure";  // レスポンシブ変数
+@import "./setting/typography"; // テキスト変数
+@import "./setting/gap";        // 間隔
+
+// 導入
+@import "./introduction/swiper.min";         // スライダー関係
+@import "./introduction/luminous-basic.min"; // ポップアップ+スライダー機能付き
+
+// サイト内（基本パーツ）
+@import "./components/common";  // 共通
+@import "./components/header";  // ヘッダー
+@import "./components/footer";  // フッター
+@import "./components/nav";     // ナビゲーション
+@import "./components/contents";// コンテンツ
+@import "./components/title";   // コンテンツ > タイトル
+@import "./components/contact"; // お問い合わせ
+@import "./components/flex";    // 横並び要素
+@import "./components/banner";  // バナー
+@import "./components/tab";     // タブ
+@import "./components/modal";   // モーダル
+@import "./components/btn";     // ボタン
+@import "./components/link";    // リンク
+@import "./components/slider";  // カルーセル
+@import "./components/popup";   // ポップアップ
+@import "./components/video";   // 動画
+@import "./components/tab";     // タブコンテンツ
+@import "./components/dropmenu";// ドロップメニュー
+@import "./components/iframe";  // 読み込み表示
+
+// 各ページ
+@import "./page/top";
+@import "./page/concept";
+@import "./page/layout";
+@import "./page/plan";
+@import "./page/equipment";
+@import "./page/location";
+@import "./page/quality";       // 基本使わない。
+@import "./page/overview";      // 基本使わない。
+
+/*
+    アニメーション
+    細かな調整は下記サイトを参考に
+    https://cubic-bezier.com/
+*/
+@import "./animation/common";
+@import "./animation/flip";
+@import "./animation/slide";
+@import "./animation/color";
+@import "./animation/scroll";
+@import "./animation/zoom";
+@import "./animation/fade";
+@import "./animation/move";
+@import "./animation/img";
+@import "./animation/underline";
+@import "./animation/original";
+
+
+.km-container {
+    &.shop_detail {
+        &.-maeda{
+            .jk-detail_recommendInner{
+                .Ranking-none{
+                    display: none;
+                }
+                .jk-list3Line_ttl{
+                    height: 37px !important;
+                    @include min(768){
+                        height: 24px !important;
+                    }
+                }
+            }
+        }
+    }
+}
