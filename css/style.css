@@ -4573,37 +4573,94 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
 }
-.c-contents.-imgBg .c-contentsBox.-logo-item01 {
-  top: 54%;
-  left: 95.5%;
-  width: 5%;
-}
-@media (width >= 768px) {
-  .c-contents.-imgBg .c-contentsBox.-logo-item01 {
-    top: 17.5%;
-    left: 30.8%;
-    width: 2.3%;
+@media (768px >= width) {
+  .c-contents.-imgBg .c-contentsBox.-plan-text01 {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 81%;
   }
 }
-.c-contents.-imgBg .c-contentsBox.-logo-item02 {
-  top: 45%;
-  left: 100%;
-  width: 5%;
-}
 @media (width >= 768px) {
-  .c-contents.-imgBg .c-contentsBox.-logo-item02 {
-    top: 10%;
-    left: 33%;
-    width: 1.5%;
+  .c-contents.-imgBg .c-contentsBox.-plan-text01 {
+    top: 0%;
+    left: 25%;
+    width: 75%;
   }
 }
 @media (768px >= width) {
-  .c-contents.-imgBg .c-contentsBox.-f-logo_s {
-    top: 8%;
+  .c-contents.-imgBg .c-contentsBox.-plan-title02 {
+    top: 11%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  }
+}
+@media (width >= 768px) {
+  .c-contents.-imgBg .c-contentsBox.-plan-title02 {
+    top: 14%;
+    left: 10%;
+    width: 90%;
+  }
+}
+@media (768px >= width) {
+  .c-contents.-imgBg .c-contentsBox.-plan-title04 {
+    top: 11%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+}
+@media (width >= 768px) {
+  .c-contents.-imgBg .c-contentsBox.-plan-title04 {
+    top: 14%;
+    left: 9.7%;
+    width: 90%;
+  }
+}
+@media (768px >= width) {
+  .c-contents.-imgBg .c-contentsBox.-plan-text02 {
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
-    z-index: 1;
+    width: 95%;
+  }
+}
+@media (width >= 768px) {
+  .c-contents.-imgBg .c-contentsBox.-plan-text02 {
+    top: 40%;
+    left: 10%;
+    width: 68%;
+  }
+}
+@media (768px >= width) {
+  .c-contents.-imgBg .c-contentsBox.-plan-text03 {
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+  }
+}
+@media (width >= 768px) {
+  .c-contents.-imgBg .c-contentsBox.-plan-text03 {
+    top: 40%;
+    left: 10%;
+    width: 68%;
+  }
+}
+@media (768px >= width) {
+  .c-contents.-imgBg .c-contentsBox.-plan-text04 {
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+  }
+}
+@media (width >= 768px) {
+  .c-contents.-imgBg .c-contentsBox.-plan-text04 {
+    top: 40%;
+    left: 10%;
+    width: 75%;
   }
 }
 .c-contents.-returnBtn a {
@@ -4721,6 +4778,22 @@ button.swiper-pagination-bullet {
 }
 .c-contents_title.-plan::before {
   content: "PLAN";
+  white-space: nowrap;
+}
+.c-contents_title.-facade::before {
+  content: "FACADE";
+  white-space: nowrap;
+}
+.c-contents_title.-interior::before {
+  content: "INTERIOR";
+  white-space: nowrap;
+}
+.c-contents_title.-eq::before {
+  content: "EQUIPMENT";
+  white-space: nowrap;
+}
+.c-contents_title.-house::before {
+  content: "JYUKYO'S HAPPY HOUSE";
   white-space: nowrap;
 }
 .c-contents_title.-basinArea::before {
@@ -5993,59 +6066,59 @@ a {
     background: #3b3b3b !important;
   }
 }
-.swiper.swiper-Build, .swiper.swiper-Video {
+.swiper.swiper-eq, .swiper.swiper-Build, .swiper.swiper-Video {
   width: 100%;
   height: 100%;
 }
-.swiper.swiper-Build .swiper-slide, .swiper.swiper-Video .swiper-slide {
+.swiper.swiper-eq .swiper-slide, .swiper.swiper-Build .swiper-slide, .swiper.swiper-Video .swiper-slide {
   transform: scale(0.8);
 }
-.swiper.swiper-Build .swiper-slide img, .swiper.swiper-Video .swiper-slide img {
+.swiper.swiper-eq .swiper-slide img, .swiper.swiper-Build .swiper-slide img, .swiper.swiper-Video .swiper-slide img {
   pointer-events: auto !important;
 }
-.swiper.swiper-Build .swiper-slide-active, .swiper.swiper-Video .swiper-slide-active {
+.swiper.swiper-eq .swiper-slide-active, .swiper.swiper-Build .swiper-slide-active, .swiper.swiper-Video .swiper-slide-active {
   opacity: 1;
   transform: scale(1) !important;
 }
-.swiper.swiper-Build .swiper-slide:hover, .swiper.swiper-Video .swiper-slide:hover {
+.swiper.swiper-eq .swiper-slide:hover, .swiper.swiper-Build .swiper-slide:hover, .swiper.swiper-Video .swiper-slide:hover {
   opacity: 1;
   transform: scale(0.9);
 }
-.swiper.swiper-Build .swiper-pagination, .swiper.swiper-Video .swiper-pagination {
+.swiper.swiper-eq .swiper-pagination, .swiper.swiper-Build .swiper-pagination, .swiper.swiper-Video .swiper-pagination {
   bottom: 0;
   left: 51%;
   transform: translateX(-50%);
 }
 @media (width >= 768px) {
-  .swiper.swiper-Build .swiper-pagination, .swiper.swiper-Video .swiper-pagination {
+  .swiper.swiper-eq .swiper-pagination, .swiper.swiper-Build .swiper-pagination, .swiper.swiper-Video .swiper-pagination {
     bottom: 0px;
   }
 }
-.swiper.swiper-Build .swiper-pagination-bullet, .swiper.swiper-Video .swiper-pagination-bullet {
+.swiper.swiper-eq .swiper-pagination-bullet, .swiper.swiper-Build .swiper-pagination-bullet, .swiper.swiper-Video .swiper-pagination-bullet {
   border-radius: 4px;
   transform: scaleX(1);
   transition: 0.5s all;
 }
 @media (width >= 768px) {
-  .swiper.swiper-Build .swiper-pagination-bullet, .swiper.swiper-Video .swiper-pagination-bullet {
+  .swiper.swiper-eq .swiper-pagination-bullet, .swiper.swiper-Build .swiper-pagination-bullet, .swiper.swiper-Video .swiper-pagination-bullet {
     border-radius: 1px;
   }
 }
-.swiper.swiper-Build .swiper-pagination-bullet span, .swiper.swiper-Video .swiper-pagination-bullet span {
+.swiper.swiper-eq .swiper-pagination-bullet span, .swiper.swiper-Build .swiper-pagination-bullet span, .swiper.swiper-Video .swiper-pagination-bullet span {
   display: inline-block;
 }
-.swiper.swiper-Build .swiper-pagination-bullet-active, .swiper.swiper-Video .swiper-pagination-bullet-active {
+.swiper.swiper-eq .swiper-pagination-bullet-active, .swiper.swiper-Build .swiper-pagination-bullet-active, .swiper.swiper-Video .swiper-pagination-bullet-active {
   width: 50px;
   background: #ebebeb;
   border: 1px solid #3b3b3b;
 }
 @media (width >= 768px) {
-  .swiper.swiper-Build .swiper-pagination-bullet-active, .swiper.swiper-Video .swiper-pagination-bullet-active {
+  .swiper.swiper-eq .swiper-pagination-bullet-active, .swiper.swiper-Build .swiper-pagination-bullet-active, .swiper.swiper-Video .swiper-pagination-bullet-active {
     background: #3b3b3b;
   }
 }
 .swiper .swiper-button-prev::after, .swiper .swiper-button-next::after {
-  color: #ebebeb !important;
+  color: #636363 !important;
 }
 .swiper .swiper-button-prev.-delta::after, .swiper .swiper-button-next.-delta::after {
   background-repeat: no-repeat;

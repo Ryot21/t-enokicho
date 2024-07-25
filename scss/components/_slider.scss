@@ -141,6 +141,7 @@
         }
     }
     // 施工例用 > スライダー
+    &.swiper-eq,
     &.swiper-Build,
     &.swiper-Video{
         width: 100%;
@@ -194,7 +195,7 @@
         &-prev,
         &-next{
             &::after{
-                color: $main-color--gray !important;
+                color: $main-color--Dgray !important;
                 // filter: drop-shadow(1px 1px 3px black);
                 @include min(768){
                 }

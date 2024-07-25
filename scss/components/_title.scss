@@ -64,7 +64,11 @@
     &.-layout{&::before{content: "TOWN LAYOUT"; white-space: nowrap;}}  // レイアウト
     &.-house-layout{&::before{content: "HOUSE LAYOUT"; white-space: nowrap;}}       // ハウスレイアウト
     &.-plan{&::before{content: "PLAN"; white-space: nowrap;}}                       // プラン
-
+    &.-facade{&::before{content: "FACADE"; white-space: nowrap;}}
+    &.-interior{&::before{content: "INTERIOR"; white-space: nowrap;}}
+    &.-eq{&::before{content: "EQUIPMENT"; white-space: nowrap;}}
+    &.-house{&::before{content: "JYUKYO'S HAPPY HOUSE"; white-space: nowrap;}}
+    
     &.-basinArea{&::before{content: "THE BASIN AREA"; white-space: nowrap;}}        // 水回り
     &.-kitchen{&::before{content: "KITCHEN";}}                                      // キッチン
     &.-bathroom{&::before{content: "BATHROOM";}}                                    // お風呂

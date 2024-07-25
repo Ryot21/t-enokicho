@@ -363,37 +363,85 @@
 				width: 100%;
 				height: 100%;
 			}
-			// ヘッダーロゴ
-			&.-logo{
-				&-item01{//緑色の鳥
-					top: 54%;
-					left: 95.5%;
-					width: 5%;
-					@include min(768){
-						top: 17.5%;
-						left: 30.8%;
-						width: 2.3%;
-					}
-				}
-				&-item02{//黄色の鳥
-					top: 45%;
-					left: 100%;
-					width: 5%;
-					@include min(768){
-						top: 10%;
-						left: 33%;
-						width: 1.5%;
-					}
-				}
-			}
-			// ファーストビュー > ロゴ
-			&.-f-logo_s{
+
+			// 自由設計
+			&.-plan-text01{
 				@include max(768){
-					top: 8%;
+					top: 70%;
 					left: 50%;
 					transform: translate(-50%, -50%);
-					width: 60%;
-					z-index: 1;
+					width: 81%;
+				}
+				@include min(768){
+					top: 0%;
+					left: 25%;
+					width: 75%;
+				}
+			}
+			&.-plan-title02{
+				@include max(768){
+					top: 11%;
+					left: 55%;
+					transform: translate(-50%, -50%);
+					width: 70%;
+				}
+				@include min(768){
+					top: 14%;
+					left: 10%;
+					width: 90%;
+				}
+			}
+			&.-plan-title04{
+				@include max(768){
+					top: 11%;
+					left: 60%;
+					transform: translate(-50%, -50%);
+					width: 80%;
+				}
+				@include min(768){
+					top: 14%;
+					left: 9.7%;
+					width: 90%;
+				}
+			}
+
+			&.-plan-text02{
+				@include max(768){
+					top: 47%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 95%;
+				}
+				@include min(768){
+					top: 40%;
+					left: 10%;
+					width: 68%;
+				}
+			}
+			&.-plan-text03{
+				@include max(768){
+					top: 48%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 95%;
+				}
+				@include min(768){
+					top: 40%;
+					left: 10%;
+					width: 68%;
+				}
+			}
+			&.-plan-text04{
+				@include max(768){
+					top: 48%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 95%;
+				}
+				@include min(768){
+					top: 40%;
+					left: 10%;
+					width: 75%;
 				}
 			}
 		}
