@@ -102,6 +102,12 @@
         margin: auto;
     }
 }
+.w60s{
+    @include max(768){
+        width: 60% !important;
+        margin: auto;
+    }
+}
 .w50s{
     @include max(768){
         width: 50% !important;

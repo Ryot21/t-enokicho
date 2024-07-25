@@ -2848,6 +2848,13 @@ button.swiper-pagination-bullet {
 }
 
 @media (768px >= width) {
+  .w60s {
+    width: 60% !important;
+    margin: auto;
+  }
+}
+
+@media (768px >= width) {
   .w50s {
     width: 50% !important;
     margin: auto;
@@ -5110,6 +5117,11 @@ button.swiper-pagination-bullet {
   transform: translateX(-50%) scaleY(0.75);
   width: 100%;
   color: #3b3b3b;
+}
+@media (width >= 768px) {
+  .c-contents_subTitle.-borderBtm::before {
+    bottom: -40%;
+  }
 }
 .c-contents_subTitle.-borderBtm.-dot::before {
   border-bottom: 3px dotted;

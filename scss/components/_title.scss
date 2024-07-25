@@ -330,6 +330,7 @@
             transform: translateX(-50%) scaleY(0.75);
             width: 100%;
             color: $main-color--b;
+            @include min(768){bottom: -40%;}
         }
         // アイコン文頭にある場合のみ、ボーダーの位置を変更する。
         &.-dot{&::before{border-bottom: 3px dotted;}}
